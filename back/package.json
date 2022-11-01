@@ -1,0 +1,19 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "npm install",
+        "start": "nodemon json.js",
+        "watch": "forever -w json.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "forever": "^1.0.0",
+        "node-telegram-bot-api": "^0.59.0"
+    }
+}
