@@ -52,7 +52,7 @@ function ProfCourses() {
               <NavLink className='review-course-btn' onClick={(e) => dispatch(changeCourse(l.titleURL, e))} to={`/prof-courses/${l.titleURL}.html`}>Подробнее</NavLink>
             </div>
             <NavLink className='container-img' onClick={(e) => goCardCourse(l.titleURL, e)} to={`/prof-courses/${l.titleURL}.html`}>
-              <img src={l.image} alt='hairstyle'></img>
+              {l.image !== '' ? <img src={l.image} alt='hairstyle'></img> : false}
             </NavLink>
             <title className='title-course'>{l.title}</title>
             <div className='price-course'>

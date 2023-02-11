@@ -80,6 +80,10 @@ a {
   color: #ffffff;
 }
 
+.navbar-brand {
+  text-shadow: #bd9a7a 1px 0 10px;
+}
+
 .navbar-brand-line,
 .navbar-location-line,
 .navbar-contacts-phone,

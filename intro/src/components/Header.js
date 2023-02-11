@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import {nanoid} from 'nanoid';
-import {NavLink, Navigate} from'react-router-dom';
+import {NavLink} from'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { showForm } from '../redux/actionCreators';
 
@@ -60,7 +60,7 @@ function Header(){
                   <div className='navbar-location'>
                     <span className='navbar-location-line'>Мы находимся</span>
                     <span className='navbar-location-line'>г. Самара</span>
-                    <span className='navbar-location-line'>ул. Куйбышева 108</span>
+                    <span className='navbar-location-line'>ул. Лукачёва 4</span>
                   </div>
                   <a className='mobile-contacts-phone' href="tel:+78462713030" onClick={(e)=>console.log('call')}></a>
                   <NavLink className='navbar-brand' to='/' onClick={(e)=>setSelect('/')}>
