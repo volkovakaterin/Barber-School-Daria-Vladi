@@ -5,8 +5,6 @@ import hairColoring from '../img/hairColoring.jpg';
 import hairCut from '../img/hairCut.jpg';
 import hairStylingWithMaster from '../img/hairStylingWithMaster.jpg';
 import hairStyling from '../img/hairStyling.jpg';
-import visagyst from '../img/visagyst1.JPG';
-import makeupYouself from '../img/makeupYouself.JPG'
 
 const initialState = {
   items: [
@@ -22,15 +20,6 @@ const initialState = {
         id: 'jbs96o7',
         titleURL: 'basic-course-hairdresser',
         image: hairStylingWithMaster
-      },
-      {
-        title: 'Базовый курс "Кератин. Ботокс"',
-        content: 'Обучение двум процедурам,подойдет как мастерам-новичкам так и профессионалам',
-        fullContent: <div><p>-теория (методичка)</p><p>-отработка на моделях (1 картин, 1 ботокс)</p><p>- стартовый набор (по 50гр составов кератина и ботокса)</p><p>- 8 ак. часов (~день с 10 до 18:00-19:00)</p><p>-сертификат</p></div>,
-        price: { group: { time: '1 день', price: '18 000' }, personal: { time: '', price: '' } },
-        id: 'jbs96o7',
-        titleURL: 'course-keratin-botox',
-        image: ''
       },
       {
         title: 'Блок 1. Уходы для волос',
@@ -86,30 +75,6 @@ const initialState = {
         titleURL: 'block-6-practice-with-clients',
         image: hairStylingWithMaster
       }]
-    },
-    {
-      title: 'Курсы профессионального визажиста и макияжа для себя',
-      id: 'visagiste',
-      list: [
-        {
-          title: 'Курс визажиста',
-          content: 'Получите творческую и востребованную в бьюти сфере профессию — Визажист.',
-          fullContent: <div><p>5 занятий с отработкой:</p><p>-теория</p><p>-дневной макияж/нюд</p><p>-стрелки</p><p>-смоки</p><p>-инстамакияж</p><p>-экзамен</p><p>Курс позволит Вам получить невероятно интересную, творческую и востребованную в бьюти сфере профессию — Визажист. Курс не требует специальной подготовки и дополнительных навыков.</p></div>,
-          price: { group: { time: '5 занятий', price: '18000' }, personal: { time: '', price: '' } },
-          id: 'hvw3lh36',
-          titleURL: 'vysagyst',
-          image: visagyst
-        },
-        {
-          title: 'Макияж для себя',
-          content: 'Научиться умело наносить как дневной макияж так и роскошный вечерний',
-          fullContent: <div><p>2 макияжа: нюд + вечерний(стрелки или смоки)</p><p>3 макияжа: нюд + стрелки + смоки 7000 руб.</p><p>Курс "Макияж для себя" для всех желающих научиться правильно подчеркивать свою красоту и умело наносить как дневной макияж так и роскошный вечерний!</p></div>,
-          price: { group: { time: '2 занятия', price: 'от 5000' }, personal: { time: '', price: '' } },
-          id: 'nso84ngu',
-          titleURL: 'makeup-youself',
-          image: makeupYouself
-        }
-      ]
     }
   ],
   chosenCourse: ''

@@ -43,7 +43,7 @@ export const sendRegistrationSuccess = () => ({
 
 export const sendRegistrationForm = async (dispatch, message) => {
   try {
-    const response = await fetch('//https://dariavlady.ru:8000/send_registration_form', {
+    const response = await fetch('//dariavlady.ru:8000/send_registration_form', {
       //https://dariavlady.ru:8000/send_registration_form
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

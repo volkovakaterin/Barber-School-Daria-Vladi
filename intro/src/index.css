@@ -1,21 +1,23 @@
-/* @font-face { */
-/* font-family: "Baron Neue"; */
-/* font-style: normal; */
-/* font-weight: 400; */
-/* src: Если не получилось, загрузит woff2 */
-/* url("./fonts/baronneue.woff2") format("woff2"), */
-/* Если браузер не поддерживает woff2, загрузит woff */
-/* url("./fonts/baronneue.woff") format("woff");} */
-
 @font-face {
-  font-family: 'Monserrat';
+  font-family: "Monserrat";
   font-style: normal;
   font-weight: 400;
   src:
-    /* Если не получилось, загрузит woff2 */
-    url("./fonts/montserrat-variablefont_wght.woff2") format("woff2"),
+    /* Если не получилось, загрузит woff2 */ url("./fonts/montserrat-variablefont_wght.woff2")
+      format("woff2"),
     /* Если браузер не поддерживает woff2, загрузит woff */
-    url("./fonts/montserrat-variablefont_wght.woff") format("woff");
+      url("./fonts/montserrat-variablefont_wght.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Comforta";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/comfortaa-light.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/comfortaa-light.woff") format("woff");
 }
 
 html {
@@ -26,18 +28,22 @@ body {
   height: 100%;
   margin: 0;
   position: relative;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Comforta", "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 800;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
 }
 
 ul {
@@ -48,6 +54,76 @@ a {
   text-decoration: none;
 }
 
+.about-motivation {
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+
+.about-motivation-line {
+  position: absolute;
+  left: 15%;
+  width: 1100px;
+  height: 2px;
+  background-color: #000;
+  bottom: 5%;
+}
+
+.about-motivation-img-hair {
+  position: absolute;
+  right: 0;
+}
+
+.about-motivation-img {
+  margin-top: 150px;
+}
+
+.about-motivation-rectangle {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 1100px;
+  height: 350px;
+  background-color: #dfbc8d;
+  opacity: 18%;
+}
+
+.about-motivation-decor {
+  position: absolute;
+  left: 32%;
+  top: 12%;
+  width: 300px;
+  height: 300px;
+  background: url("./svg/kvadrat-dva.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-motivation-text-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-size: 36px;
+}
+
+.about-motivation-rectangle-line {
+  position: absolute;
+  bottom: 8%;
+  left: 56%;
+  width: 500px;
+  height: 100px;
+  /* border: solid 2px #DFBC8D; */
+  background-color: #bd9a7a;
+  opacity: 18%;
+}
+
+.about-motivation .choose-course-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}
+
 .container-header {
   flex: 0 0 auto;
   overflow: hidden;
@@ -55,13 +131,7 @@ a {
 }
 
 .navbar-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.container-fluid {
-  padding-left: 4.167vw;
-  padding-right: 4.167vw;
+  margin-left: 4.167vw;
 }
 
 .navbar-container {
@@ -81,7 +151,21 @@ a {
 }
 
 .navbar-brand {
-  text-shadow: #bd9a7a 1px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand-line-wrapper {
+  margin-left: 20px;
+}
+
+.navbar-brand-logo {
+  width: 58px;
+  height: 70px;
+  background: url("./svg/logo-DV.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar-brand-line,
@@ -101,41 +185,54 @@ a {
 }
 
 .navbar-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 4.167vw;
+  align-items: flex-end;
   font-size: 1.15rem;
 }
 
 .navbar-button-call {
   box-sizing: content-box;
-  width: 150px;
   height: 45px;
-  background-color: #bd9a7a;
+  margin-top: 10px;
+  padding: 1px 20px;
+  background-color: #000;
+  border: solid 1px #bd9a7a;
+  font-family: "Comforta", "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
   color: #ffffff;
-  border-radius: 25px;
-  position: absolute;
-  top: 95px;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-size: 14px;
-  font-weight: 800;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .navbar-button-call:hover {
   opacity: 0.7;
 }
 
-.navbar-brand-line {
+.navbar-brand-line-name {
+  font-family: "Monserrat";
   font-weight: 800;
-  font-size: 32px;
-  text-align: center;
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: #bd9a7a;
+}
+
+.navbar-brand-line-subtitle {
+  font-family: "Comforta";
+  padding-left: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 10px;
   color: #bd9a7a;
 }
 
 .box-navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav {
@@ -150,21 +247,21 @@ a {
   position: relative;
 }
 
-.navbar-nav .nav-item:not(:first-child):before {
+.nav-item:before {
   content: "";
   display: block;
   height: 16px;
   border-left: solid 2px #bd9a7a;
   position: absolute;
-  left: -45px
+  right: -10px;
+  bottom: 1px;
 }
 
 .navbar-location::before {
-  content: url('./svg/map-location-pointer-svgrepo-com.svg');
+  content: url("./svg/map-location-pointer-svgrepo-com.svg");
   position: relative;
-  top: 15px;
+  top: 18px;
   left: -20px;
-
 }
 
 .navbar-location .navbar-location-line:first-child {
@@ -184,22 +281,22 @@ a {
 .about-courses {
   margin-top: 40px;
   padding: 20px 0 35px 0;
-  border: 1px solid #bca188
+  border: 1px solid #bca188;
 }
 
 .about-courses-title {
   text-align: center;
-    font-size: 25px;
-    margin-top: 15px;
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 .about-school-title {
   text-align: center;
-    margin: 40px 0 20px 0;
-    font-size: 25px;
-    border-top: 1px solid rgba(12, 11, 16, 0.5);
-    border-bottom: 1px solid rgba(12, 11, 16, 0.5);
-    padding: 10px;
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  border-top: 1px solid rgba(12, 11, 16, 0.5);
+  border-bottom: 1px solid rgba(12, 11, 16, 0.5);
+  padding: 10px;
 }
 
 .about-courses-section {
@@ -227,8 +324,7 @@ a {
 
 .navlink-choose-course {
   margin: auto;
-    width: 150px;
-    display: block;
+  display: block;
 }
 
 .about-school-content {
@@ -239,7 +335,6 @@ a {
 .about-school-container-img {
   display: block;
   width: 30%;
-  /* height: 600px; */
 }
 
 .about-school-container-img img {
@@ -249,9 +344,22 @@ a {
 }
 
 .about-school-container-decription {
+  position: relative;
   width: 70%;
   text-align: end;
   margin-left: 10px;
+}
+
+.about-school-substrate {
+  position: absolute;
+  bottom: -5px;
+  right: -50px;
+  width: 500px;
+  height: 345px;
+  background: url("./svg/logo-substrate.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ProfCourses */
@@ -329,7 +437,6 @@ main {
 .price-number {
   font-weight: bolder;
   color: #bd9a7a;
-  text-shadow: #bd9a7a 1px 0 10px;
 }
 
 .container-course {
@@ -345,7 +452,7 @@ main {
   overflow: hidden;
   width: 296px;
   height: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .review-course-hover {
@@ -396,7 +503,14 @@ main {
 }
 
 .description-about-course {
+  position: relative;
+
   margin-left: 30px;
+}
+
+.description-about-course .course-btn-enroll {
+  position: absolute;
+  bottom: 0;
 }
 
 .title-about-course {
@@ -419,7 +533,8 @@ main {
 .about-course-img {
   width: 316px;
   height: 390px;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 .about-course-img img {
@@ -451,7 +566,7 @@ main {
 }
 
 .price-content::before {
-  content: url('./svg/price.svg');
+  content: url("./svg/price.svg");
   position: relative;
   top: 5px;
 }
@@ -468,29 +583,40 @@ main {
   box-sizing: content-box;
   width: 150px;
   height: 45px;
-  background-image: linear-gradient(to right, #bca188, #bd9a7a, #bd9a7a, #bca188);
+  padding: 1px 60px;
+  background-image: linear-gradient(
+    to right,
+    #bca188,
+    #bd9a7a,
+    #bd9a7a,
+    #bca188
+  );
   box-shadow: 0 4px 15px 0 rgb(189 154 122 / 75%);
   border: #bd9a7a;
   color: #ffffff;
-  margin-top: 35px;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-size: 14px;
-  font-weight: 800;
+  font-family: "Comforta";
+  font-size: 16px;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .course-btn-enroll:hover {
   opacity: 0.7;
 }
 
+.look-all-course .course-btn-enroll {
+  display: block;
+  width: 250px;
+  margin-top: 40px;  
+}
+
 .content-about-course {
   margin-top: 35px;
   padding: 10px;
   border: 2px solid #bd9a7a;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 /* Sign As Model */
@@ -511,7 +637,8 @@ main {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 70px;
-  box-shadow:  -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 .line-sign-model {
@@ -527,7 +654,6 @@ main {
   text-align: center;
 }
 
-
 /* Schedule */
 
 .header-schedule {
@@ -541,7 +667,8 @@ main {
   background-color: #0c0b10;
   border-radius: 25px;
   width: 100%;
-  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15), 4px 4px 10px rgba(12, 11, 16, 0.15);
+  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15),
+    4px 4px 10px rgba(12, 11, 16, 0.15);
 }
 
 .header-table {
@@ -573,8 +700,7 @@ main {
   border-bottom: 1px solid rgba(189, 154, 122, 0.5);
 }
 
-.line-table-cell
- {
+.line-table-cell {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -587,8 +713,8 @@ main {
 }
 
 .wrapper__table-btn {
- width: 50%;
- text-align: center;
+  width: 50%;
+  text-align: center;
 }
 
 /* Form */
@@ -610,10 +736,11 @@ main {
 
 .box-all-boxes {
   width: 600px;
-    margin: auto;
+  margin: auto;
 }
 
-.box-report-show, .box-error-show {
+.box-report-show,
+.box-error-show {
   display: block;
   width: 500px;
   margin: 40vh auto;
@@ -623,7 +750,8 @@ main {
   font-size: 20px;
 }
 
-.box-report-hide, .box-error-hide {
+.box-report-hide,
+.box-error-hide {
   display: none;
 }
 
@@ -639,7 +767,7 @@ main {
 
 .hide-form-back-call {
   display: block;
-  background: url('./svg/hide-form-back-call.svg');
+  background: url("./svg/hide-form-back-call.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   width: 20px;
@@ -655,7 +783,13 @@ main {
   display: flex;
   margin-bottom: 10px;
   color: #f6f6f6;
-  background: linear-gradient(to right, rgba(30, 26, 28, 1), rgb(15, 13, 14), rgb(15, 13, 14), rgba(30, 26, 28, 1));
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   border: none;
 }
 
@@ -683,7 +817,7 @@ main {
 
 .label-phone-show {
   display: block;
-  color:#ffffff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -702,13 +836,22 @@ main {
 
 .btn-back-call-phone {
   color: #f6f6f6;
-  background: linear-gradient(to right, rgba(30, 26, 28, 1), rgb(15, 13, 14), rgb(15, 13, 14), rgba(30, 26, 28, 1));
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   border: none;
   cursor: pointer;
 }
 
-@media(min-width: 1400px) {
+@media (min-width: 1400px) {
   .container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
     background-color: black;
   }
 }
@@ -717,17 +860,22 @@ main {
   box-sizing: content-box;
   width: 100px;
   height: 35px;
-  background: linear-gradient(120deg, rgba(246, 246, 246, 1),rgb(189, 154, 122), rgb(189, 154, 122), rgb(189, 154, 122));
+  background: linear-gradient(
+    120deg,
+    rgba(246, 246, 246, 1),
+    rgb(189, 154, 122),
+    rgb(189, 154, 122),
+    rgb(189, 154, 122)
+  );
   border: 0;
   border-radius: 25px;
   color: #ffffff;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   font-weight: 800;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .table-btn-enroll:hover {
@@ -790,8 +938,7 @@ main {
   color: #f6f6f6;
 }
 
-@media(min-width: 1060px) and (max-width: 1399px) {
-
+@media (min-width: 1060px) and (max-width: 1399px) {
   .container-header {
     background-color: black;
   }
@@ -810,12 +957,12 @@ main {
   }
 
   /* Main */
-.container-main {
-  width: 90%;
-}
+  .container-main {
+    width: 90%;
+  }
 }
 
-@media(min-width: 641px) and (max-width: 1059px) {
+@media (min-width: 641px) and (max-width: 1059px) {
   .container-header {
     background-color: black;
   }
@@ -832,7 +979,7 @@ main {
     width: 100px;
     height: 35px;
     font-size: 12px;
-    top: 85px
+    top: 85px;
   }
 
   .navbar-nav {
@@ -936,46 +1083,45 @@ main {
   }
 
   /* Main */
-.container-main {
-  width: 90%;
-}
+  .container-main {
+    width: 90%;
+  }
 
-.about-courses {
-  margin-top: 20px;
-  padding: 10px 0 15px 0;
-}
+  .about-courses {
+    margin-top: 20px;
+    padding: 10px 0 15px 0;
+  }
 
-.about-courses-title {
+  .about-courses-title {
     font-size: 20px;
     margin-top: 5px;
-}
+  }
 
-.about-school-title {
+  .about-school-title {
     margin: 15px 0 15px 0;
     font-size: 20px;
-}
+  }
 
-.about-courses-section-content {
-  margin-top: 15px;
-}
+  .about-courses-section-content {
+    margin-top: 15px;
+  }
 
-.about-courses-section-img img {
-  width: 35px;
-}
+  .about-courses-section-img img {
+    width: 35px;
+  }
 
-.about-courses-section-description {
-  width: 70%;
-  margin-left: 20px;
-  font-size: 14px;
-}
+  .about-courses-section-description {
+    width: 70%;
+    margin-left: 20px;
+    font-size: 14px;
+  }
 
-.about-school-container-decription {
-  font-size: 14px;
-}
+  .about-school-container-decription {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 640px) {
-
   .body {
     position: fixed;
   }
@@ -1053,7 +1199,7 @@ main {
 
   .mobile-contacts-phone {
     display: block;
-    background: url('./svg/call-svgrepo-com.svg');
+    background: url("./svg/call-svgrepo-com.svg");
     background-position: center;
     background-repeat: no-repeat;
     border: 2px solid rgb(74%, 60%, 48%, 0.7);
@@ -1080,13 +1226,12 @@ main {
 
   .mobile-menu-close {
     display: block;
-    background: url('./svg/delete-svgrepo-com2.svg');
+    background: url("./svg/delete-svgrepo-com2.svg");
     background-position: center;
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
   }
-
 
   .title-social-net {
     display: none;
@@ -1148,13 +1293,16 @@ main {
     justify-content: space-evenly;
   }
 
-  .wrapper_filter__all, .wrapper_filter__hairstyle, .wrapper_filter__visagiste {
+  .wrapper_filter__all,
+  .wrapper_filter__hairstyle,
+  .wrapper_filter__visagiste {
     border: 1px solid rgba(56, 48, 53, 0.2);
     border-radius: 50px;
     margin-top: 10px;
     padding: 13px;
     font-size: 14px;
-    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%), 4px 4px 10px rgb(56 48 53 / 15%);
+    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%),
+      4px 4px 10px rgb(56 48 53 / 15%);
   }
 
   .select_filter {
@@ -1174,9 +1322,10 @@ main {
     padding: 20px 0;
     margin-top: 20px;
     border: 1px solid rgba(56, 48, 53, 0.3);
-    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%), 4px 4px 10px rgb(56 48 53 / 15%);
-}
-    
+    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%),
+      4px 4px 10px rgb(56 48 53 / 15%);
+  }
+
   .container-img {
     margin: auto;
     width: 90%;
@@ -1191,7 +1340,7 @@ main {
 
   .title-course {
     margin-top: 10px;
-    padding: 0 5px
+    padding: 0 5px;
   }
 
   .price-group {
@@ -1241,7 +1390,8 @@ main {
     text-align: center;
     margin: 20px auto 20px auto;
     border: 1px solid #bca188;
-    box-shadow:  -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
   }
 
   .title-about-course::after,
@@ -1264,7 +1414,6 @@ main {
     letter-spacing: 1px;
     font-size: 15px;
     border-bottom: 1px solid #bd9a7a;
-
   }
 
   .box-personal {
@@ -1294,7 +1443,13 @@ main {
     height: 40px;
     margin: auto;
     margin-top: 20px;
-    background: linear-gradient(90deg, rgba(246, 246, 246, 1), rgb(189, 154, 122), rgb(189, 154, 122), rgba(246, 246, 246, 1));
+    background: linear-gradient(
+      90deg,
+      rgba(246, 246, 246, 1),
+      rgb(189, 154, 122),
+      rgb(189, 154, 122),
+      rgba(246, 246, 246, 1)
+    );
     box-shadow: none;
   }
 
@@ -1354,7 +1509,7 @@ main {
 
   .wrapper__table-btn {
     width: 30%;
-   }
+  }
 
   .table-btn-enroll {
     width: 70px;
@@ -1387,11 +1542,12 @@ main {
   }
 
   /* Modal-form */
-.box-all-boxes {
-  width: 95%;
-}
+  .box-all-boxes {
+    width: 95%;
+  }
 
-  .box-report-show, .box-error-show {
+  .box-report-show,
+  .box-error-show {
     box-sizing: border-box;
     width: 95%;
     padding: 10px;
@@ -1406,7 +1562,7 @@ main {
     left: 94%;
     width: 15px;
     height: 15px;
-    background-size: 15px; 
+    background-size: 15px;
   }
 
   .box-form-course,
@@ -1416,89 +1572,90 @@ main {
     font-size: 16px;
   }
 
-   /* Main */
+  /* Main */
 
-.container-main {
-  width: 95%;
-}
+  .container-main {
+    width: 95%;
+  }
 
-.about-courses {
-  margin-top: 10px;
-  padding: 15px 0 15px 0;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
-}
+  .about-courses {
+    margin-top: 10px;
+    padding: 15px 0 15px 0;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
 
-.about-courses-title {
+  .about-courses-title {
     font-size: 17px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
+  }
 
-.about-school-title {
+  .about-school-title {
     margin: 20px 0 10px 0;
     font-size: 17px;
     border-top: 1px solid rgba(12, 11, 16, 0.5);
     border-bottom: 1px solid rgba(12, 11, 16, 0.5);
     padding: 10px;
-}
+  }
 
-.about-courses-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
+  .about-courses-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
 
-.about-courses-section-content {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  width: 100%;
-}
+  .about-courses-section-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
 
-.about-courses-section-img img {
-  width: 30px;
-}
+  .about-courses-section-img img {
+    width: 30px;
+  }
 
-.about-courses-section-description {
-  width: 80%;
-  margin-left: 10px;
-  font-size: 14px;
-}
+  .about-courses-section-description {
+    width: 80%;
+    margin-left: 10px;
+    font-size: 14px;
+  }
 
-.navlink-choose-course {
-  width: 100%;
-}
+  .navlink-choose-course {
+    width: 100%;
+  }
 
-.btn-choose-course {
-  width: 100%;
-  padding: 0;
-}
+  .btn-choose-course {
+    width: 100%;
+    padding: 0;
+  }
 
-.about-school {
-  margin-top: 30px;
-}
+  .about-school {
+    margin-top: 30px;
+  }
 
-.about-school-content {
-  flex-direction: column;
-  width: 100%;
-}
+  .about-school-content {
+    flex-direction: column;
+    width: 100%;
+  }
 
-.about-school-container-img {
-  display: block;
-  width: 100%;
-}
+  .about-school-container-img {
+    display: block;
+    width: 100%;
+  }
 
-.about-school-container-img img {
-  width: 100%;
-  height: 100%;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
-}
+  .about-school-container-img img {
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
 
-.about-school-container-decription {
-  width: 100%;
-  margin-left: 0;
-  text-align: center;
-  font-size: 14px;
-}
-
+  .about-school-container-decription {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+  }
 }

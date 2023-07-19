@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeCourse } from '../redux/actionCreators';
 import { NavLink } from 'react-router-dom';
@@ -7,17 +7,17 @@ function ProfCourses() {
   const dispatch = useDispatch();
   const items = useSelector(state => state.courses.items);
   const [hoverSection, setHover] = useState('');
-  const [selectFilter, setFilter] = useState('all');
+  //const [selectFilter, setFilter] = useState('all');
   const [listCourses, setCourses] = useState(items);
 
-  const filters = [
-    {title: 'Все курсы',
-    id: 'all'}, 
-    {title: 'Курсы парикмахеров',
-    id: 'hairstyle'}, 
-    {title: 'Курсы визажистов',
-    id: 'visagiste'}
-  ]
+  // const filters = [
+  //   {title: 'Все курсы',
+  //   id: 'all'}, 
+  //   {title: 'Курсы парикмахеров',
+  //   id: 'hairstyle'}, 
+  //   {title: 'Курсы визажистов',
+  //   id: 'visagiste'}
+  // ]
 
   const changeHover = (id) => {
     if (hoverSection !== id) {
@@ -31,16 +31,16 @@ function ProfCourses() {
     } else return false;
   }
 
-  useEffect(() => {
-    if(selectFilter === 'all') {
-      setCourses(items)
-    }else setCourses(items.filter(i=>(i.id === selectFilter)))
-  }, [items, selectFilter])
+  // useEffect(() => {
+  //   if(selectFilter === 'all') {
+  //     setCourses(items)
+  //   }else setCourses(items.filter(i=>(i.id === selectFilter)))
+  // }, [items, selectFilter])
   
 
-  const listFilters = filters.map(i => (
-    <div key={i.id} className={selectFilter === i.id ? `wrapper_filter__${i.id} select_filter` : `wrapper_filter__${i.id}`} onClick={()=>setFilter(i.id)}>{i.title}</div>
-  ))
+  // const listFilters = filters.map(i => (
+  //   <div key={i.id} className={selectFilter === i.id ? `wrapper_filter__${i.id} select_filter` : `wrapper_filter__${i.id}`} onClick={()=>setFilter(i.id)}>{i.title}</div>
+  // ))
 
   const courses = listCourses.map(i => (
     <><h2 className='header-description-courses'>{i.title}</h2>
@@ -70,9 +70,9 @@ function ProfCourses() {
     <main>
       <div className="container-profcourses">
         <h1 className='header-prof-courses'>Все курсы</h1>
-        {(window.screen.width < 640 || window.screen.width === 640) ? <div className='wrapper_filter'>
+        {/* {(window.screen.width < 640 || window.screen.width === 640) ? <div className='wrapper_filter'>
           {listFilters}
-        </div> : false}
+        </div> : false} */}
         {courses}
       </div>
     </main>

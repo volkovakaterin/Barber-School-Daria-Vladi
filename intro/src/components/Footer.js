@@ -23,7 +23,7 @@ const menu = links.map((element) =>
           <div className='number-footer'>8 (846) 271-30-30</div>
           <div className='address-footer'>
             <p>г. Самара</p>
-            <p>ул. Куйбышева 108</p>
+            <p>ул. Лукачёва 4</p>
           </div>
         </div>
         <ul className='nav-footer'>
