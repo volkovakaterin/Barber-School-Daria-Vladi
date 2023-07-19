@@ -4,7 +4,6 @@ import { showFormRegistration } from '../redux/actionCreators';
 
 
 function Course(props) {
- console.log(props);
   const dispatch = useDispatch();
 
   const storeCourses = useSelector(state => state.courses);
@@ -15,8 +14,6 @@ function Course(props) {
     dispatch(showFormRegistration(course));
     document.body.style.overflow = 'hidden';
   }
-  console.log(chosenCourse);
-  console.log(chosenCourse.title);
 
   const imgCourse = <div className='about-course-img'>
     <img src={chosenCourse.image} alt='hairstyle'></img>
@@ -31,6 +28,14 @@ function Course(props) {
             <h1 className='title-about-course'>{chosenCourse.title}</h1>
             {(window.screen.width < 640 || window.screen.width === 640) ? imgCourse : false}
             <div className='box-duration-price'>
+              {chosenCourse.price.defolt && <div className='box-defolt'>
+                <h2 className='defolt'>ПРОДОЛЖИТЕЛЬОСТЬ ОБУЧЕНИЯ</h2>
+                <div className='duratin-content'>{chosenCourse.price.defolt.time}</div>
+                <div className='price-content'>
+                  <span className='price-size'>{chosenCourse.price.defolt.price}</span>
+                  <span className='ruble'> ₽</span>
+                </div>
+              </div>}
               {chosenCourse.price.group.time !== '' ? <div className='box-group'>
                 <h2 className='group'>ОБУЧЕНИЕ В ГРУППЕ</h2>
                 <div className='duratin-content'>{chosenCourse.price.group.time}</div>

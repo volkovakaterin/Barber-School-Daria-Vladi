@@ -547,11 +547,12 @@ main {
   margin-top: 45px;
 }
 
+.box-defolt h2,
 .box-group h2,
 .box-personal h2 {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   text-shadow: #997d63 1px 0 10px;
 }
 
@@ -1051,6 +1052,7 @@ main {
     width: 330px;
   }
 
+  .box-defolt h2,
   .box-group h2,
   .box-personal h2 {
     font-size: 15px;
@@ -1406,6 +1408,7 @@ main {
     text-align: center;
   }
 
+  .box-defolt h2,
   .box-group h2,
   .box-personal h2 {
     margin-top: 5px;

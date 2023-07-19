@@ -10,13 +10,11 @@ const initialState = {
 export default function scheduleReducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_FORM:
-      console.log('SHOW-FORM');
       return {
         ...state,
         showForm: true
       };
     case HIDE_FORM:
-      console.log('HIDE-FORM');
       return {
         showForm: false,
         course: '',
@@ -24,7 +22,6 @@ export default function scheduleReducer(state = initialState, action) {
         successSending: false
       };
     case SHOW_FORM_REGISTRATION:
-      console.log('SHOW_FORM_REGISTRATION');
       const { course } = action.payload;
       return {
         ...state,

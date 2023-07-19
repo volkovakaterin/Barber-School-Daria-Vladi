@@ -7,7 +7,7 @@ function ProfCourses() {
   const dispatch = useDispatch();
   const items = useSelector(state => state.courses.items);
   const [hoverSection, setHover] = useState('');
-  //const [selectFilter, setFilter] = useState('all');
+  // const [selectFilter, setFilter] = useState('all');
   const [listCourses, setCourses] = useState(items);
 
   // const filters = [
@@ -29,6 +29,14 @@ function ProfCourses() {
     if (window.screen.width < 640 || window.screen.width === 640) {
       dispatch(changeCourse(title, e))
     } else return false;
+  }
+
+  const priceOutput = (price) => {
+    if(price.group.price !== '') {
+return price.group.price
+    } else if (price.personal.price !== '') {
+      return price.personal.price
+    } else return price.defolt.price
   }
 
   // useEffect(() => {
@@ -57,7 +65,7 @@ function ProfCourses() {
             <title className='title-course'>{l.title}</title>
             <div className='price-course'>
               <div className='price-group'>
-                <span className='price-number'> {l.price.group.price !== '' ? l.price.group.price : l.price.personal.price}</span>
+                <span className='price-number'> {priceOutput(l.price)}</span>
                 <span className='price-number'> ₽</span>
               </div>
             </div>
