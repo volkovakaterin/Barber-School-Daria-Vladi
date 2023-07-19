@@ -20,8 +20,6 @@ function Header(){
 
     ];
 
-    console.log(window.screen.width);
-
     const showModalForm =(e)=>{
       dispatch(showForm());
       document.body.style.overflow = 'hidden';
@@ -62,7 +60,7 @@ function Header(){
                     <span className='navbar-location-line'>г. Самара</span>
                     <span className='navbar-location-line'>ул. Лукачёва 4</span>
                   </div>
-                  <a className='mobile-contacts-phone' href="tel:+78462713030" onClick={(e)=>console.log('call')}></a>
+                  <a className='mobile-contacts-phone' href="tel:+78462713030"></a>
                   <NavLink className='navbar-brand' to='/' onClick={(e)=>setSelect('/')}>
                     <div className='navbar-brand-line'>ШКОЛА СТИЛИСТОВ</div>
                     <div className='navbar-brand-line'>DARIA VLADY</div> 

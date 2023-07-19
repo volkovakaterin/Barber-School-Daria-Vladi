@@ -31,6 +31,7 @@ function App() {
       <Route path="/schedule.html" element={<Schedule/>}/>  
       <Route path="/sign-as-model.html" element={<SignAsModel/>}/>
       <Route path={`/prof-courses/basic-course-hairdresser.html`} element={<Course id = 'jbs96o7'/>}/>
+      <Route path={`/prof-courses/course-keratin-botox.html`} element={<Course id = 'k74ld025'/>}/>
       <Route path={`/prof-courses/block-1-hair-care.html`} element={<Course id = 'kuv233'/>}/>
       <Route path={`/prof-courses/block-2-salon-styling.html`} element={<Course id = 'gle94fg'/>}/>
       <Route path={`/prof-courses/block-3-women-haircuts.html`} element={<Course id = 'wy96o3'/>}/>

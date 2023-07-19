@@ -32,9 +32,7 @@ function RestorativeForm() {
   }
 
   const normalizePhoneNumber = (value) => {
-    console.log(typeof value);
     const phoneNumber = parsePhoneNumber(value, 'RU');
-    console.log(phoneNumber);
     if(!phoneNumber) {
       setValuePhone(value)
     } else setValuePhone(phoneNumber.formatInternational());
