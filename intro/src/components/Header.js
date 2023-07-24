@@ -89,7 +89,8 @@ function Header() {
                 </div>
               </div>
             </NavLink>
-            <a
+            <div className="mobile-btn-container">
+              <a
               className="mobile-contacts-phone"
               href="tel:+78462713030"
               onClick={(e) => console.log("call")}
@@ -102,6 +103,7 @@ function Header() {
               }
               onClick={(e) => fadeOut(e)}
             ></div>
+            </div>
           </div>
         </div>
       </div>

@@ -42,7 +42,9 @@ body {
   height: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -107,6 +109,10 @@ a {
   font-size: 36px;
 }
 
+.choose-course-container {
+  margin: 30px 0 0 40px;
+}
+
 .about-motivation-rectangle-line {
   position: absolute;
   bottom: 8%;
@@ -118,12 +124,6 @@ a {
   opacity: 18%;
 }
 
-.about-motivation .choose-course-container {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-}
-
 .container-header {
   flex: 0 0 auto;
   overflow: hidden;
@@ -131,7 +131,7 @@ a {
 }
 
 .navbar-header {
-  margin-left: 4.167vw;
+  margin-left: 2vw;
 }
 
 .navbar-container {
@@ -188,7 +188,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-right: 4.167vw;
+  margin-right: 2vw;
   align-items: flex-end;
   font-size: 1.15rem;
 }
@@ -236,9 +236,8 @@ a {
 }
 
 .navbar-nav {
-  width: 1000px;
   display: flex;
-  justify-content: space-evenly;
+  gap: 40px;
   margin: auto;
   padding-left: 0;
 }
@@ -416,7 +415,6 @@ main {
 }
 
 .container-img {
-  /* width: 296px; */
   display: block;
   height: 365px;
   padding: 10px;
@@ -425,7 +423,6 @@ main {
 .container-img img {
   width: 296px;
   height: 365px;
-  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -609,7 +606,7 @@ main {
 .look-all-course .course-btn-enroll {
   display: block;
   width: 250px;
-  margin-top: 40px;  
+  margin-top: 40px;
 }
 
 .content-about-course {
@@ -848,7 +845,7 @@ main {
   cursor: pointer;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 640px) {
   .container-header {
     display: flex;
     justify-content: space-between;
@@ -939,9 +936,42 @@ main {
   color: #f6f6f6;
 }
 
+@media (max-width: 1690px) {
+  .navbar-brand-line-wrapper {
+    margin-left: 5px;
+  }
+
+  .navbar-brand-line-name {
+    font-size: 32px;
+  }
+
+  .navbar-brand-line-subtitle {
+    font-size: 10px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .navbar-contacts {
+    font-size: 15px;
+  }
+
+  .navbar-button-call {
+    height: 35px;
+    padding: 1px 10px;
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 1060px) and (max-width: 1399px) {
   .container-header {
     background-color: black;
+  }
+
+  .navbar-nav {
+    max-width: 400px;
+    flex-wrap: wrap;
   }
 
   .navbar-contacts-phone,
@@ -953,18 +983,14 @@ main {
     height: 35px;
   }
 
-  .box-navbar {
-    padding-top: 40px;
-  }
-
   /* Main */
   .container-main {
     width: 90%;
   }
 }
 
-@media (min-width: 641px) and (max-width: 1059px) {
-  .container-header {
+ @media (min-width: 641px) and (max-width: 1059px) {
+  /*.container-header {
     background-color: black;
   }
 
@@ -984,14 +1010,16 @@ main {
   }
 
   .navbar-nav {
-    width: 600px;
+    max-width: 400px;
+    flex-wrap: wrap;
+    gap: 25px;
     font-size: 14px;
   }
 
   .navbar-nav .nav-item:not(:first-child):before {
     border-left: solid 1px #bd9a7a;
     left: -13px;
-  }
+  } */
 
   .container-profcourses,
   .container-about-course,
@@ -1136,7 +1164,24 @@ main {
   }
 
   .navbar-header {
+    margin-left: 0;
+
     background-color: black;
+  }
+
+  .navbar-container {
+    padding: 0;
+  }
+
+  .navbar-brand-logo {
+    width: 58px;
+    height: 76px;
+  }
+
+  .mobile-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .header-open-burger {
@@ -1195,8 +1240,18 @@ main {
     left: calc(50% - 25px);
   }
 
-  .navbar-brand-line {
-    font-size: 17px;
+  .navbar-brand-line-wrapper {
+    margin-left: 5px;
+  }
+
+  .navbar-brand-line-name {
+    font-size: calc(1em + 1vw);
+    letter-spacing: 5px;
+  }
+
+  .navbar-brand-line-subtitle {
+    font-size: 8px;
+    letter-spacing: 5px;
   }
 
   .mobile-contacts-phone {
@@ -1204,10 +1259,10 @@ main {
     background: url("./svg/call-svgrepo-com.svg");
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid rgb(74%, 60%, 48%, 0.7);
-    border-radius: 50px;
-    width: 35px;
-    height: 35px;
+    /* border: 2px solid rgb(74%, 60%, 48%, 0.7);
+    border-radius: 50px; */
+    width: 33px;
+    height: 33px;
   }
 
   .mobile-menu,
@@ -1218,6 +1273,11 @@ main {
     height: 2px;
     background-color: rgb(74%, 60%, 48%, 0.9);
     border-radius: 25px;
+  }
+
+  .mobile-menu {
+    margin-right: 5px;
+    margin-top: -10px;
   }
 
   .mobile-menu::after {
@@ -1233,6 +1293,85 @@ main {
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
+  }
+
+  /* About motivation */
+
+  .about-motivation {
+    margin-top: 25px;
+  }
+
+  .about-motivation-img {
+    z-index: 1;
+
+    width: 49%;
+    margin-top: 50px;
+  }
+
+  .about-motivation-img img {
+    width: 100%;
+  }
+
+  .about-motivation-line {
+    display: none;
+  }
+
+  .about-motivation-rectangle {
+    z-index: 2;
+    top: 8%;
+    height: 200px;
+  }
+
+  .about-motivation-img-hair {
+    z-index: 3;
+
+    width: 62%;
+  }
+
+  .about-motivation-img-hair img {
+    width: 100%;
+  }
+
+  .about-motivation-text-wrapper {
+    top: 50%;
+    left: 55%;
+
+    width: 50%;
+
+    font-size: calc(1rem + 1vw);
+  }
+
+  .about-motivation .choose-course-container {
+    width: 90%;
+    margin: 10px 0 0 0;
+  }
+
+  .about-motivation-rectangle-line {
+    bottom: -20%;
+    left: 30%;
+
+    width: 50%;
+    height: auto;
+    aspect-ratio: 0.95;
+  }
+
+  .about-motivation-decor {
+    display: none;
+  }
+
+  .about-motivation-kvadroline {
+    position: absolute;
+    top: -15%;
+    left: 48px;
+
+    width: 617px;
+    height: auto;
+    aspect-ratio: 1.54;
+
+    background-image: url("./svg/line-header.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .title-social-net {
@@ -1578,11 +1717,13 @@ main {
   /* Main */
 
   .container-main {
-    width: 95%;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .about-courses {
-    margin-top: 10px;
+    margin-top: 500px;
     padding: 15px 0 15px 0;
     box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
       4px 4px 10px rgb(12 11 16 / 15%);
@@ -1631,7 +1772,19 @@ main {
 
   .btn-choose-course {
     width: 100%;
+    margin: 0;
     padding: 0;
+
+    font-size: 14px;
+
+    background-image: linear-gradient(
+      to right,
+      #bca188,
+      #bd9a7a,
+      #bd9a7a,
+      #bca188
+    );
+    box-shadow: 0 4px 15px 0 rgb(189 154 122 / 75%);
   }
 
   .about-school {
@@ -1660,5 +1813,70 @@ main {
     margin-left: 0;
     text-align: center;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+  /* About motivation */
+  .about-motivation-rectangle {
+    top: 5%;
+    height: calc(200px + 12vw);
+  }
+}
+
+@media (min-width: 460px) and (max-width: 640px) {
+  .about-motivation-text-wrapper {
+    top: 55%;
+    left: 55%;
+    width: 40%;
+  }
+
+  .about-motivation .choose-course-container {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 480px) {
+  /* About motivation */
+  .about-motivation-rectangle {
+    top: 5%;
+    height: calc(200px + 5vw);
+  }
+}
+
+@media (min-width: 420px) and (max-width: 640px) {
+  /* About motivation */
+  .about-motivation-kvadroline {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+
+    background-image: url("./svg/line-header-640.svg");
+  }
+}
+
+@media (max-width: 340px) {
+  /* Header */
+
+  .mobile-contacts-phone {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+
+  .mobile-menu {
+    margin-left: 5px;
+  }
+
+  .mobile-menu,
+  .mobile-menu::after {
+    width: 25px;
+  }
+}
+
+@media (max-width: 308px) {
+  /* About motivation */
+  .about-motivation-kvadroline {
+    left: 42px;
   }
 }
