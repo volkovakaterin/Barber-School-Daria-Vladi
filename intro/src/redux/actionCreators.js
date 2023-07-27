@@ -1,4 +1,4 @@
-import { TAKE_COURSES, CHANGE_COURSE, TAKE_SCHEDULE, SHOW_FORM, HIDE_FORM, SHOW_FORM_REGISTRATION, SEND_REGISTRATION_FAILURE, SEND_REGISTRATION_SUCCESS } from "./actions";
+import { TAKE_COURSES, CHANGE_COURSE, SHOW_FORM, HIDE_FORM, SHOW_FORM_REGISTRATION, SEND_REGISTRATION_FAILURE, SEND_REGISTRATION_SUCCESS } from "./actions";
 
 export const takeCourses = () => ({
   type: TAKE_COURSES,
@@ -9,10 +9,6 @@ export const changeCourse = (chosenCourse, e) => ({
   payload: {
     chosenCourse
   }
-});
-
-export const takeSchedule = () => ({
-  type: TAKE_SCHEDULE,
 });
 
 export const showForm = () => ({

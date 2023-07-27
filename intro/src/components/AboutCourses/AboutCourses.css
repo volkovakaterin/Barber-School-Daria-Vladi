@@ -1,0 +1,142 @@
+.about_courses {
+  margin-top: 204px;
+}
+
+.about_courses_title {
+  position: relative;
+  display: inline-block;
+  padding: 10px 75px 30px 150px;
+  box-sizing: border-box;
+
+  font-family: "Montserrat Alternates";
+  font-size: 36px;
+  font-weight: 500;
+
+  border: 2px solid #dfbc8d;
+}
+
+.about_courses_title::before {
+  position: absolute;
+  top: -15px;
+  left: -124px;
+  content: "";
+  display: block;
+  width: 1062px;
+  height: 47px;
+  background-color: rgba(146, 129, 128, 0.26);
+}
+
+.about_courses_section {
+  display: flex;
+  gap: 146px;
+}
+
+.about_courses_advantage {
+  width: 50%;
+}
+
+.about_courses_content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100px;
+  margin-top: 86px;
+  border-left: 1px solid #000;
+}
+
+.about_courses_content::after {
+  position: absolute;
+  bottom: 0;
+  left: 370px;
+  content: "";
+  display: block;
+  width: 867px;
+  height: 1px;
+  background-color: #e9dccf;
+}
+
+.about_courses_description {
+  margin-left: 100px;
+  text-align: right;
+  font-family: "Comfortaa";
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.about_courses_right {
+  width: 50%;
+}
+
+.about_courses_decor {
+  position: relative;
+  text-align: end;
+}
+
+.about_courses_decor::before {
+  position: absolute;
+  z-index: 2;
+  top: -59px;
+  content: "";
+  display: block;
+  width: 79.7%;
+  aspect-ratio: 0.67;
+  height: auto;
+  border: 2px solid #000;
+  box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.about_courses_decor::after {
+  position: absolute;
+  z-index: 3;
+  bottom: -200px;
+  left: -50px;
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  background: url("../../svg/diamond.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about_courses_image {
+  position: relative;
+  width: 79.7%;
+  margin-top: -100px;
+
+  box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.choose_course_container {
+  position: relative;
+  margin-top: 292px;
+}
+
+.choose_course_container::after {
+  position: absolute;
+  top: 50%;
+  left: 124px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.btn_choose_course {
+  position: relative;
+  z-index: 2;
+  padding: 15px 60px;
+
+  font-family: "Comforta";
+  font-size: 22px;
+  font-weight: 300;
+
+  color: #fff;
+  background-color: #bc9f84;
+  border: none;
+  box-shadow: 4px 15px 15px 0 rgb(189 154 122 / 75%);
+  cursor: pointer;
+}

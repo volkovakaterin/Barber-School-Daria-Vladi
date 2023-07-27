@@ -1,6 +1,5 @@
 export const TAKE_COURSES = 'FETCH_COURSES';
 export const CHANGE_COURSE = 'CHANGE_COURSE';
-export const TAKE_SCHEDULE = 'TAKE_SCHEDULE';
 export const SHOW_FORM = 'SHOW_FORM';
 export const HIDE_FORM = 'HIDE_FORM';
 export const SHOW_FORM_REGISTRATION = 'SHOW_FORM_REGISTRATION';

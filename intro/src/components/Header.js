@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,7 +17,6 @@ function Header() {
       name: "Профессиональные курсы",
       key: nanoid(),
     },
-    { link: "/schedule.html", name: "Записаться на курс", key: nanoid() },
     { link: "/sign-as-model.html", name: "Записаться моделью", key: nanoid() },
   ];
 

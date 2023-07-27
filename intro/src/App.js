@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './components/Main';
 import ProfCourses from './components/ProfCourses';
-import Schedule from './components/Schedule';
 import SignAsModel from './components/SignAsModel';
 import Course from './components/Course';
 import RestorativeForm from './components/RestorativeForm';
@@ -27,8 +26,7 @@ function App() {
     <Header/>    
     <Routes>     
       <Route path="/" element={<Main/>} />
-      <Route path="/prof-courses.html" element={<ProfCourses/>}/>
-      <Route path="/schedule.html" element={<Schedule/>}/>  
+      <Route path="/prof-courses.html" element={<ProfCourses/>}/> 
       <Route path="/sign-as-model.html" element={<SignAsModel/>}/>
       <Route path={`/prof-courses/basic-course-hairdresser.html`} element={<Course id = 'jbs96o7'/>}/>
       <Route path={`/prof-courses/course-keratin-botox.html`} element={<Course id = 'k74ld025'/>}/>

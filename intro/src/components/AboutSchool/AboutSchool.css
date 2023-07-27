@@ -1,0 +1,32 @@
+.about_school {
+  margin-top: 204px;
+}
+
+.about_school_title {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  width: 244px;
+  margin-left: 777px;
+  padding: 21px 21px 175px 42px;
+  box-sizing: border-box;
+
+  font-family: "Montserrat Alternates";
+  font-size: 36px;
+  font-weight: 500;
+
+  border: 2px solid #dfbc8d;
+  text-align: end;
+}
+
+.about_school_title::before {
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: -124px;
+  content: "";
+  display: block;
+  width: 665px;
+  height: 65px;
+  background-color: #dcd8d7;
+}
