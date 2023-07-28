@@ -1,12 +1,23 @@
 @font-face {
-  font-family: "Monserrat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src:
-    /* Если не получилось, загрузит woff2 */ url("./fonts/montserrat-variablefont_wght.woff2")
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Regular.woff2")
       format("woff2"),
     /* Если браузер не поддерживает woff2, загрузит woff */
-      url("./fonts/montserrat-variablefont_wght.woff") format("woff");
+      url("./fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Light.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/Montserrat-Light.woff") format("woff");
 }
 
 @font-face {
@@ -39,7 +50,7 @@ body {
   /* height: 100%; */
   margin: 0;
   position: relative;
-  font-family: "Comforta", "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: "Comforta", "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,6 +68,7 @@ h1,
 h2,
 h3 {
   font-weight: 400;
+  margin: 0;
 }
 
 ul {
@@ -210,7 +222,7 @@ a {
   padding: 1px 20px;
   background-color: #000;
   border: solid 1px #bd9a7a;
-  font-family: "Comforta", "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: "Comforta", "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
@@ -224,8 +236,8 @@ a {
 }
 
 .navbar-brand-line-name {
-  font-family: "Monserrat";
-  font-weight: 800;
+  font-family: "Montserrat";
+  font-weight: 300;
   font-size: 45px;
   letter-spacing: 10px;
   color: #bd9a7a;
@@ -379,7 +391,7 @@ main {
   flex: 1 0 auto;
   overflow: hidden;
   background-color: #f6f6f6;
-  padding-bottom: 100px;
+  padding-bottom: 300px;
   min-height: 450px;
 }
 
@@ -880,7 +892,7 @@ main {
   border: 0;
   border-radius: 25px;
   color: #ffffff;
-  font-family: "Monserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   font-weight: 800;
