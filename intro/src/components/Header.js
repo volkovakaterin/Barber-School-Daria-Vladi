@@ -20,8 +20,6 @@ function Header() {
     { link: "/sign-as-model.html", name: "Записаться моделью", key: nanoid() },
   ];
 
-  console.log(window.screen.width);
-
   const showModalForm = (e) => {
     dispatch(showForm());
     document.body.style.overflow = "hidden";

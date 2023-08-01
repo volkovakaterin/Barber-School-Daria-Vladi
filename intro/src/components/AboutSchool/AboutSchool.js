@@ -24,8 +24,8 @@ function AboutSchool() {
       </div>
       </div>
       <div className='about_school_content_Daria'>
+        <div className='about_school_decor_Daria'></div>
         <div className='about_school_container_decription'>
-          <div className='about_school_decor_Daria'></div>
         <p>Мы создаем притягательную атмосферу красоты и преображения. Раскрываем уникальность каждого человека, соединяя красоту его внутреннего мира и мира, в котором мы живём.</p>
         <p>Делаем то, что любим и любим то, что делаем!</p>
       </div>
@@ -38,7 +38,7 @@ function AboutSchool() {
       <div className='about_school_btn_substrate'></div>
       <div className='about_school_btn_decor'></div>
                 <NavLink className='navlink_choose_course' to='/prof-courses.html'>
-                    <button className='btn_choose_course'>Купить курс в рассрочку</button>
+                    <button className='about_school_btn btn_choose_course'>Купить курс в рассрочку</button>
                     </NavLink>
             </div>  
   </div>)

@@ -137,7 +137,6 @@
   background-color: rgba(223, 204, 180, 0.68);
 }
 
-
 .about_school_btn_container {
   position: relative;
   margin-top: 154px;
@@ -163,3 +162,141 @@
   border: 2px solid #e7dac9;
 }
 
+@media (max-width: 640px) {
+  .about_school {
+    margin-top: 254px;
+  }
+
+  .about_school_title_wrapper {
+    text-align: end;
+  }
+
+  .about_school_title_decor {
+    top: 15px;
+    right: 0;
+    width: 95%;
+    height: 40px;
+  }
+
+  .about_school_title {
+    width: auto;
+    margin-left: 0;
+    margin-right: 20px;
+    padding: 30px 40px 74px 20px;
+
+    font-size: 19px;
+  }
+
+  .about_school_content_wrapper {
+    margin-top: -20px;
+  }
+
+  .about_school_content_team {
+    flex-direction: column;
+  }
+
+  .about_school_decor_team {
+    display: none;
+  }
+
+  .about_school_substrate_team {
+    top: 25%;
+    left: 0;
+    width: 75%;
+    aspect-ratio: 1.7;
+    height: auto;
+  }
+
+  .about_school_content_team .about_school_container_img::after {
+    position: absolute;
+    left: -10px;
+    top: -30px;
+    content: "";
+    display: block;
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: #000;
+  }
+
+  .about_school_content_team .about_school_container_img,
+  .about_school_content_team .about_school_container_decription {
+    width: 100%;
+  }
+
+  .about_school_container_img {
+    text-align: center;
+  }
+
+  .about_school_content_team .about_school_container_img img {
+    width: 80%;
+  }
+
+  .about_school_container_decription,
+  .about_school_container_decription span {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .about_school_content_team .about_school_container_decription {
+    margin-top: 60px;
+  }
+
+  .about_school_container_decription p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .about_school_content_Daria {
+    position: relative;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .about_school_content_Daria
+    > .about_school_container_decription
+    p:nth-child(2) {
+    display: none;
+  }
+
+  .about_school_substrate_Daria {
+    top: -20px;
+    right: 0;
+    width: 80%;
+    aspect-ratio: 0.68;
+    height: auto;
+  }
+
+  .about_school_content_Daria .about_school_container_img {
+    text-align: start;
+  }
+
+  .about_school_decor_Daria {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background-size: contain;
+  }
+
+  .about_school_btn_container {
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  .about_school_btn_substrate {
+    display: none;
+  }
+
+  .about_school_btn_decor {
+    right: 0;
+    left: auto;
+    top: 50%;
+    width: 50%;
+    aspect-ratio: 1.5;
+    height: auto;
+  }
+
+  .about_school_btn {
+    width: 60%;
+  }
+}
