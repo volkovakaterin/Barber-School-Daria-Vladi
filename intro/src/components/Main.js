@@ -20,7 +20,7 @@ function Main() {
          <div className='about-motivation-kvadroline'></div>
          <div className='about-motivation-text-wrapper'><span className='about-motivation-text'>Научим профессии мечты и прокачаем навыки</span>
          <div className='choose-course-container'>
-        <NavLink className='navlink-choose-course' to='/prof-courses.html'><button className='course-btn-enroll btn-choose-course'>Выбрать курс</button></NavLink>
+        <NavLink className='navlink-choose-course' to='/prof-courses.html'><button className='about-motivation-btn course-btn-enroll btn-choose-course'>Выбрать курс</button></NavLink>
         </div>
          </div> 
         </div>

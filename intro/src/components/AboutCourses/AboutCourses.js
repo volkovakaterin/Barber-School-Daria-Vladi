@@ -45,7 +45,7 @@ function AboutCourses() {
                     </div>
                      <div className='choose_course_container'>
                 <NavLink className='navlink_choose_course' to='/prof-courses.html'>
-                    <button className='btn_choose_course'>Посмотреть все курсы</button>
+                    <button className='about_courses_btn btn_choose_course'>Посмотреть все курсы</button>
                     </NavLink>
             </div>  
                 </div>

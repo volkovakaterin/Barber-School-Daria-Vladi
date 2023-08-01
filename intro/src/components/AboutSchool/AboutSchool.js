@@ -37,7 +37,7 @@ function AboutSchool() {
     <div className='about_school_btn_container'>
       <div className='about_school_btn_substrate'></div>
       <div className='about_school_btn_decor'></div>
-                <NavLink className='navlink_choose_course' to='/prof-courses.html'>
+                <NavLink className='about_school_navlink navlink_choose_course' to='/prof-courses.html'>
                     <button className='about_school_btn btn_choose_course'>Купить курс в рассрочку</button>
                     </NavLink>
             </div>  
