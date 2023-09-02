@@ -277,7 +277,7 @@ a {
   border-left: solid 2px #bd9a7a;
   position: absolute;
   right: -10px;
-  bottom: 1px;
+  top: calc(50% - 8px);
 }
 
 .navbar-location::before {
@@ -961,7 +961,7 @@ main {
 }
 
 @media (max-width: 1690px) {
-  .navbar-brand-line-wrapper {
+   .navbar-brand-line-wrapper {
     margin-left: 5px;
   }
 
@@ -1072,6 +1072,36 @@ main {
     top: 62%;
     font-size: 25px;
   }
+}
+
+@media (max-width: 1059px) {
+  /* HEADER start*/
+
+  .navbar-brand-line-name {
+    font-size: calc(1em + 1vw);
+    letter-spacing: 5px;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-contacts {
+  padding-left: 20px;
+}
+
+.navbar-contacts {
+  font-size: 13px;
+}
+
+ /* HEADER end*/
 }
 
 @media (min-width: 641px) and (max-width: 1059px) {
@@ -1292,11 +1322,6 @@ main {
 
   .navbar-brand-line-wrapper {
     margin-left: 5px;
-  }
-
-  .navbar-brand-line-name {
-    font-size: calc(1em + 1vw);
-    letter-spacing: 5px;
   }
 
   .navbar-brand-line-subtitle {
@@ -1821,7 +1846,7 @@ main {
     margin: 0;
     padding: 0;
 
-    font-size: 14px;
+    font-size: 13px;
 
     background-image: linear-gradient(
       to right,
@@ -1924,5 +1949,6 @@ main {
   /* About motivation */
   .about-motivation-kvadroline {
     left: 42px;
+    top: -95px;
   }
 }

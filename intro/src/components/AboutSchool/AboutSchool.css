@@ -279,10 +279,6 @@
 }
 
 @media (max-width: 640px) {
-  .about_school {
-    margin-top: 254px;
-  }
-
   .about_school_title_wrapper {
     text-align: end;
   }
