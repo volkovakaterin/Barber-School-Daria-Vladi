@@ -1,6 +1,28 @@
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
+  font-weight: 600;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-SemiBold.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Medium.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 400;
   src:
     /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Regular.woff2")
@@ -40,10 +62,6 @@
       format("woff2"),
     /* Если браузер не поддерживает woff2, загрузит woff */
       url("./fonts/MontserratAlternates-Medium.woff") format("woff");
-}
-
-html {
-  /* height: 100%; */
 }
 
 body {
@@ -147,6 +165,19 @@ a {
   opacity: 18%;
 }
 
+.about-motivation-btn {
+  padding: 15px 60px;
+  font-family: "Comforta";
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #bc9f84;
+  border: none;
+  box-shadow: 4px 15px 15px 0 rgb(189 154 122 / 75%);
+  cursor: pointer;
+}
+
 .container-header {
   flex: 0 0 auto;
   overflow: hidden;
@@ -193,7 +224,6 @@ a {
 
 .navbar-brand-line,
 .navbar-location-line,
-.navbar-contacts-phone,
 .navbar-contacts-phone {
   display: block;
 }
@@ -351,10 +381,6 @@ a {
   margin-left: 20px;
 }
 
-.btn-choose-course {
-  margin: auto;
-}
-
 .navlink-choose-course {
   margin: auto;
   display: block;
@@ -402,7 +428,7 @@ main {
   overflow: hidden;
   background-color: #f6f6f6;
   padding-bottom: 300px;
-  min-height: 450px;
+  min-height: calc(100vh - 222px - 127px - 300px);
 }
 
 .container-profcourses,
@@ -535,17 +561,15 @@ main {
 }
 
 .description-about-course {
-  position: relative;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 30px;
 }
 
-.description-about-course .course-btn-enroll {
-  position: absolute;
-  bottom: 0;
-}
-
 .title-about-course {
+  font-family: "Montserrat";
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 25px;
   text-shadow: #997d63 1px 0 10px;
@@ -616,16 +640,16 @@ main {
 }
 
 .course-btn-container {
+  width: 100%;
   display: flex;
   gap: 20px;
 }
-
+ 
 .course-btn-container .course-btn-buy,
-.course-btn-enroll {
+.course-btn-container .course-btn-enroll {
+  width: 50%;
+  padding: 15px 10px;
   box-sizing: content-box;
-  /* width: 150px; */
-  /* height: 45px; */
-  padding: 10px 60px;
   background-image: linear-gradient(
     to right,
     #bca188,
@@ -637,7 +661,7 @@ main {
   border: #bd9a7a;
   color: #ffffff;
   font-family: "Comforta";
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 2px;
   cursor: pointer;
   transition: 0.5s;
@@ -757,7 +781,6 @@ main {
 }
 
 .line-table-cell {
-.line-table-cell {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -801,8 +824,6 @@ main {
 
 .box-report-show,
 .box-error-show {
-.box-report-show,
-.box-error-show {
   display: block;
   width: 500px;
   margin: 40vh auto;
@@ -812,8 +833,6 @@ main {
   font-size: 20px;
 }
 
-.box-report-hide,
-.box-error-hide {
 .box-report-hide,
 .box-error-hide {
   display: none;
@@ -982,7 +1001,6 @@ main {
   color: #f6f6f6;
   padding-top: 20px;
   padding-bottom: 30px;
-  padding-left: 200px;
 }
 
 .contacts-footer,
@@ -1027,7 +1045,7 @@ main {
 }
 
 @media (max-width: 1690px) {
-   .navbar-brand-line-wrapper {
+  .navbar-brand-line-wrapper {
     margin-left: 5px;
   }
 
@@ -1057,6 +1075,7 @@ main {
 @media (max-width: 1500px) {
   main {
     padding-bottom: 150px;
+    min-height: calc(100vh - 246px - 138px - 90px);
   }
 
   .container-main {
@@ -1124,11 +1143,10 @@ main {
     width: 120%;
     height: 70%;
   }
-  
+
   .about-motivation-btn {
-     position: absolute;
+    position: absolute;
     width: 80%;
-    padding: 10px 0;
     font-size: 19px;
   }
 }
@@ -1152,22 +1170,22 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
-}
+  }
 
   .nav-item {
     display: flex;
     align-items: center;
-}
+  }
 
-.navbar-contacts {
-  padding-left: 20px;
-}
+  .navbar-contacts {
+    padding-left: 20px;
+  }
 
-.navbar-contacts {
-  font-size: 13px;
-}
+  .navbar-contacts {
+    font-size: 13px;
+  }
 
- /* HEADER end*/
+  /* HEADER end*/
 }
 
 @media (min-width: 641px) and (max-width: 1059px) {
@@ -1214,12 +1232,9 @@ main {
     padding-bottom: 0;
   }
 
-  .about-course-img {
-    width: 45%;
-  }
-
+  .about-course-img,
   .description-about-course {
-    width: 45%;
+    width: 50%;
   }
 
   .title-about-course {
@@ -1242,6 +1257,11 @@ main {
 
   .price-content {
     font-size: 20px;
+  }
+
+  .course-btn-container .course-btn-buy, .course-btn-container .course-btn-enroll {
+    padding: 10px;
+    font-size: 18px;
   }
 
   .content-about-course {
@@ -1269,17 +1289,17 @@ main {
   }
 
   .about-courses-title {
-  .about-courses-title {
-    font-size: 20px;
-    margin-top: 5px;
-  }
+    .about-courses-title {
+      font-size: 20px;
+      margin-top: 5px;
+    }
   }
 
   .about-school-title {
-  .about-school-title {
-    margin: 15px 0 15px 0;
-    font-size: 20px;
-  }
+    .about-school-title {
+      margin: 15px 0 15px 0;
+      font-size: 20px;
+    }
   }
 
   .about-courses-section-content {
@@ -1360,6 +1380,7 @@ main {
   }
 
   .box-navbar {
+    display: block;
     opacity: 0;
     visibility: hidden;
     transition: 1.5s ease;
@@ -1376,6 +1397,7 @@ main {
     opacity: 1;
     visibility: visible;
     height: 100vh;
+    padding-top: 50px;
     z-index: 5;
   }
 
@@ -1386,22 +1408,28 @@ main {
   }
 
   .nav-item {
+    display: block;
     width: 50%;
     margin: auto;
     padding-top: 20px;
+    font-size: 16px;
     text-align: center;
+  }
+
+  .nav-item:before {
+    display: none;
   }
 
   .navbar-nav .nav-item:not(:first-child):before {
     content: "";
     display: block;
-    width: 50px;
+    width: 100px;
     height: 0;
     border-top: solid 1px #bd9a7a;
     border-left: 0;
     position: absolute;
-    top: 10px;
-    left: calc(50% - 25px);
+    top: 0;
+    left: calc(50% - 50px);
   }
 
   .navbar-brand-line-wrapper {
@@ -1533,6 +1561,13 @@ main {
     background-size: contain;
   }
 
+  .about-motivation-btn {
+    width: 200px;
+    font-size: 13px;
+    box-sizing: content-box;
+    padding: 15px 20px;
+  }
+
   .title-social-net {
     display: none;
   }
@@ -1559,11 +1594,10 @@ main {
   /* ProfCourses */
 
   main {
+    min-height: calc(100vh - 146px - 136px);
     margin-top: 76px;
-    min-height: 550px;
     padding-top: 0;
     padding-bottom: 70px;
-    min-height: 200px;
   }
 
   .container-profcourses,
@@ -1593,9 +1627,6 @@ main {
     justify-content: space-evenly;
   }
 
-  .wrapper_filter__all,
-  .wrapper_filter__hairstyle,
-  .wrapper_filter__visagiste {
   .wrapper_filter__all,
   .wrapper_filter__hairstyle,
   .wrapper_filter__visagiste {
@@ -1687,8 +1718,8 @@ main {
     box-sizing: border-box;
     padding: 10px;
     width: 95%;
-    text-transform: uppercase;
     font-size: 15px;
+    font-weight: 500;
     letter-spacing: 1px;
     text-align: center;
     margin: 20px auto 20px auto;
@@ -1706,6 +1737,7 @@ main {
     width: 70%;
     margin: auto;
     margin-top: 20px;
+    font-family: "Montserrat";
     text-align: center;
   }
 
@@ -1726,11 +1758,13 @@ main {
 
   .duratin-content {
     margin-top: 10px;
+    font-weight: 500;
   }
 
   .price-content {
     margin-top: 10px;
     font-size: 17px;
+    font-weight: 500;
   }
 
   .price-content::before {
@@ -1745,14 +1779,23 @@ main {
     width: 95%;
     margin: auto;
     margin-top: 20px;
-    background: linear-gradient(
-      90deg,
-      rgba(246, 246, 246, 1),
-      rgb(189, 154, 122),
-      rgb(189, 154, 122),
-      rgba(246, 246, 246, 1)
-    );
-    box-shadow: none;
+    justify-content: center;
+  }
+
+  .course-btn-container .course-btn-buy,
+  .course-btn-container .course-btn-enroll {
+    display: block;
+    width: 50%;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Comforta";
+    font-weight: 300;
+    height: 45px;
+    letter-spacing: 1px;
+  }
+
+  .course-btn-container .course-btn-enroll {
+    position: relative;
   }
 
   .content-about-course {
@@ -1812,7 +1855,6 @@ main {
   .wrapper__table-btn {
     width: 30%;
   }
-  }
 
   .table-btn-enroll {
     width: 70px;
@@ -1848,12 +1890,7 @@ main {
   .box-all-boxes {
     width: 95%;
   }
-  .box-all-boxes {
-    width: 95%;
-  }
 
-  .box-report-show,
-  .box-error-show {
   .box-report-show,
   .box-error-show {
     box-sizing: border-box;
@@ -1882,7 +1919,6 @@ main {
   }
 
   /* Main */
-  /* Main */
 
   .container-main {
     box-sizing: border-box;
@@ -1896,14 +1932,11 @@ main {
   }
 
   .about-courses-title {
-  .about-courses-title {
     font-size: 17px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  }
 
-  .about-school-title {
   .about-school-title {
     margin: 20px 0 10px 0;
     font-size: 17px;
@@ -1911,7 +1944,6 @@ main {
     border-bottom: 1px solid rgba(12, 11, 16, 0.5);
     padding: 10px;
   }
-  }
 
   .about-courses-section {
     display: flex;
@@ -1960,23 +1992,6 @@ main {
   }
   .navlink-choose-course {
     width: 100%;
-  }
-
-  .btn-choose-course {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    font-size: 13px;
-
-    background-image: linear-gradient(
-      to right,
-      #bca188,
-      #bd9a7a,
-      #bd9a7a,
-      #bca188
-    );
-    box-shadow: 0 4px 15px 0 rgb(189 154 122 / 75%);
   }
 
   .about-school {
@@ -2022,6 +2037,12 @@ main {
     margin-left: 0;
     text-align: center;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 570px) {
+  .about-motivation-btn {
+    width: auto;
   }
 }
 
@@ -2080,6 +2101,12 @@ main {
   .mobile-menu,
   .mobile-menu::after {
     width: 25px;
+  }
+}
+
+@media (max-width: 335px) {
+  .about-motivation-btn {
+    padding: 5px 20px;
   }
 }
 

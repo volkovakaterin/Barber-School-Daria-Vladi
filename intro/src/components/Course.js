@@ -48,27 +48,22 @@ function Course(props) {
   function onMessage(data) {
     switch (data.type) {
       case tinkoff.constants.READY:
-        console.log('READY', data.meta.iframe.url);
         openCreditForm(dispatch, chosenCourse.title, 'READY');
         tinkoff.methods.off(tinkoff.constants.READY, onMessage);
         break;
         case tinkoff.constants.SUCCESS:
-        console.log('SUCCESS', data.meta.iframe.url);
         openCreditForm(dispatch, chosenCourse.title, 'SUCCESS');
         tinkoff.methods.off(tinkoff.constants.SUCCESS, onMessage);
         break;
         case tinkoff.constants.ERROR_RESUME:
-        console.log('ERROR_RESUME', data.meta.iframe.url);
         openCreditForm(dispatch, chosenCourse.title, 'ERROR_RESUME');
         tinkoff.methods.off(tinkoff.constants.ERROR_RESUME, onMessage);
         break;
       case tinkoff.constants.REJECT:
-        console.log('REJECT', data.meta.iframe.url);
         openCreditForm(dispatch, chosenCourse.title, 'REJECT');
         tinkoff.methods.off(tinkoff.constants.REJECT, onMessage);
         break;
       case tinkoff.constants.CANCEL:
-        console.log('CANCEL', data.meta.iframe.url);
         openCreditForm(dispatch, chosenCourse.title, 'CANCEL');
         tinkoff.methods.off(tinkoff.constants.CANCEL, onMessage);
         break;
