@@ -231,6 +231,7 @@ a {
   color: #ffffff;
   cursor: pointer;
   transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navbar-button-call:hover {
@@ -282,6 +283,7 @@ a {
 
 .navbar-location::before {
   content: url("./svg/map-location-pointer-svgrepo-com.svg");
+  content: url("./svg/map-location-pointer-svgrepo-com.svg");
   position: relative;
   top: 18px;
   left: -20px;
@@ -305,16 +307,24 @@ a {
   margin-top: 40px;
   padding: 20px 0 35px 0;
   border: 1px solid #bca188;
+  border: 1px solid #bca188;
 }
 
 .about-courses-title {
   text-align: center;
   font-size: 25px;
   margin-top: 15px;
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 .about-school-title {
   text-align: center;
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  border-top: 1px solid rgba(12, 11, 16, 0.5);
+  border-bottom: 1px solid rgba(12, 11, 16, 0.5);
+  padding: 10px;
   margin: 40px 0 20px 0;
   font-size: 25px;
   border-top: 1px solid rgba(12, 11, 16, 0.5);
@@ -474,6 +484,7 @@ main {
   width: 296px;
   height: 0;
   transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .review-course-hover {
@@ -556,6 +567,8 @@ main {
   height: 390px;
   box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
     4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 .about-course-img img {
@@ -589,6 +602,7 @@ main {
 
 .price-content::before {
   content: url("./svg/price.svg");
+  content: url("./svg/price.svg");
   position: relative;
   top: 5px;
 }
@@ -601,6 +615,12 @@ main {
   color: #bd9a7a;
 }
 
+.course-btn-container {
+  display: flex;
+  gap: 20px;
+}
+
+.course-btn-container .course-btn-buy,
 .course-btn-enroll {
   box-sizing: content-box;
   /* width: 150px; */
@@ -621,8 +641,16 @@ main {
   letter-spacing: 2px;
   cursor: pointer;
   transition: 0.5s;
+  transition: 0.5s;
 }
 
+.course-btn-container .course-btn-enroll {
+  background-image: none;
+  background-color: #f6f6f6;
+  color: #ab8c71;
+}
+
+.course-btn-buy:hover,
 .course-btn-enroll:hover {
   opacity: 0.7;
 }
@@ -637,6 +665,8 @@ main {
   margin-top: 35px;
   padding: 10px;
   border: 2px solid #bd9a7a;
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
   box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
     4px 4px 10px rgb(12 11 16 / 15%);
 }
@@ -659,6 +689,8 @@ main {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 70px;
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
   box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
     4px 4px 10px rgb(12 11 16 / 15%);
 }
@@ -689,6 +721,8 @@ main {
   background-color: #0c0b10;
   border-radius: 25px;
   width: 100%;
+  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15),
+    4px 4px 10px rgba(12, 11, 16, 0.15);
   box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15),
     4px 4px 10px rgba(12, 11, 16, 0.15);
 }
@@ -723,6 +757,7 @@ main {
 }
 
 .line-table-cell {
+.line-table-cell {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -735,6 +770,8 @@ main {
 }
 
 .wrapper__table-btn {
+  width: 50%;
+  text-align: center;
   width: 50%;
   text-align: center;
 }
@@ -759,8 +796,11 @@ main {
 .box-all-boxes {
   width: 600px;
   margin: auto;
+  margin: auto;
 }
 
+.box-report-show,
+.box-error-show {
 .box-report-show,
 .box-error-show {
   display: block;
@@ -772,6 +812,8 @@ main {
   font-size: 20px;
 }
 
+.box-report-hide,
+.box-error-hide {
 .box-report-hide,
 .box-error-hide {
   display: none;
@@ -790,6 +832,7 @@ main {
 .hide-form-back-call {
   display: block;
   background: url("./svg/hide-form-back-call.svg");
+  background: url("./svg/hide-form-back-call.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   width: 20px;
@@ -805,6 +848,13 @@ main {
   display: flex;
   margin-bottom: 10px;
   color: #f6f6f6;
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   background: linear-gradient(
     to right,
     rgba(30, 26, 28, 1),
@@ -840,6 +890,7 @@ main {
 .label-phone-show {
   display: block;
   color: #ffffff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -858,6 +909,13 @@ main {
 
 .btn-back-call-phone {
   color: #f6f6f6;
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   background: linear-gradient(
     to right,
     rgba(30, 26, 28, 1),
@@ -889,6 +947,13 @@ main {
     rgb(189, 154, 122),
     rgb(189, 154, 122)
   );
+  background: linear-gradient(
+    120deg,
+    rgba(246, 246, 246, 1),
+    rgb(189, 154, 122),
+    rgb(189, 154, 122),
+    rgb(189, 154, 122)
+  );
   border: 0;
   border-radius: 25px;
   color: #ffffff;
@@ -897,6 +962,7 @@ main {
   font-size: 15px;
   font-weight: 800;
   cursor: pointer;
+  transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -1203,19 +1269,29 @@ main {
   }
 
   .about-courses-title {
+  .about-courses-title {
     font-size: 20px;
     margin-top: 5px;
   }
+  }
 
+  .about-school-title {
   .about-school-title {
     margin: 15px 0 15px 0;
     font-size: 20px;
+  }
   }
 
   .about-courses-section-content {
     margin-top: 15px;
   }
+  .about-courses-section-content {
+    margin-top: 15px;
+  }
 
+  .about-courses-section-img img {
+    width: 35px;
+  }
   .about-courses-section-img img {
     width: 35px;
   }
@@ -1225,7 +1301,15 @@ main {
     margin-left: 20px;
     font-size: 14px;
   }
+  .about-courses-section-description {
+    width: 70%;
+    margin-left: 20px;
+    font-size: 14px;
+  }
 
+  .about-school-container-decription {
+    font-size: 14px;
+  }
   .about-school-container-decription {
     font-size: 14px;
   }
@@ -1332,6 +1416,7 @@ main {
   .mobile-contacts-phone {
     display: block;
     background: url("./svg/call-svgrepo-com.svg");
+    background: url("./svg/call-svgrepo-com.svg");
     background-position: center;
     background-repeat: no-repeat;
     width: 33px;
@@ -1361,6 +1446,7 @@ main {
 
   .mobile-menu-close {
     display: block;
+    background: url("./svg/delete-svgrepo-com2.svg");
     background: url("./svg/delete-svgrepo-com2.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1510,6 +1596,9 @@ main {
   .wrapper_filter__all,
   .wrapper_filter__hairstyle,
   .wrapper_filter__visagiste {
+  .wrapper_filter__all,
+  .wrapper_filter__hairstyle,
+  .wrapper_filter__visagiste {
     border: 1px solid rgba(56, 48, 53, 0.2);
     border-radius: 50px;
     margin-top: 10px;
@@ -1652,10 +1741,8 @@ main {
     margin-left: 0;
   }
 
-  .course-btn-enroll {
-    display: block;
+  .course-btn-container {
     width: 95%;
-    height: 40px;
     margin: auto;
     margin-top: 20px;
     background: linear-gradient(
@@ -1725,6 +1812,7 @@ main {
   .wrapper__table-btn {
     width: 30%;
   }
+  }
 
   .table-btn-enroll {
     width: 70px;
@@ -1760,7 +1848,12 @@ main {
   .box-all-boxes {
     width: 95%;
   }
+  .box-all-boxes {
+    width: 95%;
+  }
 
+  .box-report-show,
+  .box-error-show {
   .box-report-show,
   .box-error-show {
     box-sizing: border-box;
@@ -1778,6 +1871,7 @@ main {
     width: 15px;
     height: 15px;
     background-size: 15px;
+    background-size: 15px;
   }
 
   .box-form-course,
@@ -1787,6 +1881,7 @@ main {
     font-size: 16px;
   }
 
+  /* Main */
   /* Main */
 
   .container-main {
@@ -1801,11 +1896,14 @@ main {
   }
 
   .about-courses-title {
+  .about-courses-title {
     font-size: 17px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  }
 
+  .about-school-title {
   .about-school-title {
     margin: 20px 0 10px 0;
     font-size: 17px;
@@ -1813,7 +1911,13 @@ main {
     border-bottom: 1px solid rgba(12, 11, 16, 0.5);
     padding: 10px;
   }
+  }
 
+  .about-courses-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
   .about-courses-section {
     display: flex;
     width: 100%;
@@ -1826,7 +1930,16 @@ main {
     margin-top: 15px;
     width: 100%;
   }
+  .about-courses-section-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
 
+  .about-courses-section-img img {
+    width: 30px;
+  }
   .about-courses-section-img img {
     width: 30px;
   }
@@ -1836,7 +1949,15 @@ main {
     margin-left: 10px;
     font-size: 14px;
   }
+  .about-courses-section-description {
+    width: 80%;
+    margin-left: 10px;
+    font-size: 14px;
+  }
 
+  .navlink-choose-course {
+    width: 100%;
+  }
   .navlink-choose-course {
     width: 100%;
   }
@@ -1861,7 +1982,14 @@ main {
   .about-school {
     margin-top: 30px;
   }
+  .about-school {
+    margin-top: 30px;
+  }
 
+  .about-school-content {
+    flex-direction: column;
+    width: 100%;
+  }
   .about-school-content {
     flex-direction: column;
     width: 100%;
@@ -1871,7 +1999,17 @@ main {
     display: block;
     width: 100%;
   }
+  .about-school-container-img {
+    display: block;
+    width: 100%;
+  }
 
+  .about-school-container-img img {
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
   .about-school-container-img img {
     width: 100%;
     height: 100%;
