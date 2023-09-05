@@ -11,13 +11,10 @@
 
 @font-face {
   font-family: "Montserrat";
-  font-style: normal;
+  src: url("./fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("./fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
-  src:
-    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Medium.woff2")
-      format("woff2"),
-    /* Если браузер не поддерживает woff2, загрузит woff */
-      url("./fonts/Montserrat-Medium.woff") format("woff");
+  font-style: normal;
 }
 
 @font-face {
@@ -51,17 +48,6 @@
       format("woff2"),
     /* Если браузер не поддерживает woff2, загрузит woff */
       url("./fonts/comfortaa-light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Montserrat Alternates";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    /* Если не получилось, загрузит woff2 */ url("./fonts/MontserratAlternates-Medium.woff2")
-      format("woff2"),
-    /* Если браузер не поддерживает woff2, загрузит woff */
-      url("./fonts/MontserratAlternates-Medium.woff") format("woff");
 }
 
 body {
@@ -644,7 +630,7 @@ main {
   display: flex;
   gap: 20px;
 }
- 
+
 .course-btn-container .course-btn-buy,
 .course-btn-container .course-btn-enroll {
   width: 50%;
@@ -955,40 +941,6 @@ main {
   }
 }
 
-.table-btn-enroll {
-  box-sizing: content-box;
-  width: 100px;
-  height: 35px;
-  background: linear-gradient(
-    120deg,
-    rgba(246, 246, 246, 1),
-    rgb(189, 154, 122),
-    rgb(189, 154, 122),
-    rgb(189, 154, 122)
-  );
-  background: linear-gradient(
-    120deg,
-    rgba(246, 246, 246, 1),
-    rgb(189, 154, 122),
-    rgb(189, 154, 122),
-    rgb(189, 154, 122)
-  );
-  border: 0;
-  border-radius: 25px;
-  color: #ffffff;
-  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.5s;
-  transition: 0.5s;
-}
-
-.table-btn-enroll:hover {
-  opacity: 0.7;
-}
-
 /* Footer */
 
 .container-footer {
@@ -1259,7 +1211,8 @@ main {
     font-size: 20px;
   }
 
-  .course-btn-container .course-btn-buy, .course-btn-container .course-btn-enroll {
+  .course-btn-container .course-btn-buy,
+  .course-btn-container .course-btn-enroll {
     padding: 10px;
     font-size: 18px;
   }
@@ -1856,11 +1809,6 @@ main {
     width: 30%;
   }
 
-  .table-btn-enroll {
-    width: 70px;
-    height: 25px;
-    font-size: 12px;
-  }
   /* Sign As Model */
 
   .header-sign-model {

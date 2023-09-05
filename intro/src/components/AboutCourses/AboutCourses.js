@@ -11,7 +11,7 @@ import svgCosmetics from '../../svg/cosmetics.png';
 function AboutCourses() {
     return (
         <div className='about_courses'>
-            <h1 className='about_courses_title'>Наши курсы это</h1>
+            <div className='about_courses_title'>Наши курсы это</div>
             <div className='about_courses_section'>
                 <div className='about_courses_advantage'>
                     <div className='about_courses_content'>
