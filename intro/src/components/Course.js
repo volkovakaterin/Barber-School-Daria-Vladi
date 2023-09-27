@@ -25,46 +25,46 @@ function Course(props) {
 
   const buyCredit = (title, price) => {
     const priceNumber = Number(price.replace(/ /g, ""));
-    
-    tinkoff.create(
+
+    tinkoff.createDemo(
       {
         sum: priceNumber,
         items: [{ name: `Курс ${title}`, price: priceNumber, quantity: 1 }],
         demoFlow: "sms",
-        promoCode: 'default',
+        promoCode: "default",
         shopId: "ae622543-a651-4cde-ab98-633fe0e5942f",
         showcaseId: "6008b471-8869-433a-9b9c-ab9b03f122e1",
       },
       { view: "modal" }
     );
   };
- 
+
   tinkoff.methods.on(tinkoff.constants.READY, onMessage);
   tinkoff.methods.on(tinkoff.constants.SUCCESS, onMessage);
   tinkoff.methods.on(tinkoff.constants.ERROR_RESUME, onMessage);
   tinkoff.methods.on(tinkoff.constants.REJECT, onMessage);
   tinkoff.methods.on(tinkoff.constants.CANCEL, onMessage);
- 
+
   function onMessage(data) {
     switch (data.type) {
       case tinkoff.constants.READY:
-        openCreditForm(dispatch, chosenCourse.title, 'READY');
+        openCreditForm(dispatch, chosenCourse.title, "READY");
         tinkoff.methods.off(tinkoff.constants.READY, onMessage);
         break;
-        case tinkoff.constants.SUCCESS:
-        openCreditForm(dispatch, chosenCourse.title, 'SUCCESS');
+      case tinkoff.constants.SUCCESS:
+        openCreditForm(dispatch, chosenCourse.title, "SUCCESS");
         tinkoff.methods.off(tinkoff.constants.SUCCESS, onMessage);
         break;
-        case tinkoff.constants.ERROR_RESUME:
-        openCreditForm(dispatch, chosenCourse.title, 'ERROR_RESUME');
+      case tinkoff.constants.ERROR_RESUME:
+        openCreditForm(dispatch, chosenCourse.title, "ERROR_RESUME");
         tinkoff.methods.off(tinkoff.constants.ERROR_RESUME, onMessage);
         break;
       case tinkoff.constants.REJECT:
-        openCreditForm(dispatch, chosenCourse.title, 'REJECT');
+        openCreditForm(dispatch, chosenCourse.title, "REJECT");
         tinkoff.methods.off(tinkoff.constants.REJECT, onMessage);
         break;
       case tinkoff.constants.CANCEL:
-        openCreditForm(dispatch, chosenCourse.title, 'CANCEL');
+        openCreditForm(dispatch, chosenCourse.title, "CANCEL");
         tinkoff.methods.off(tinkoff.constants.CANCEL, onMessage);
         break;
       default:
@@ -72,8 +72,6 @@ function Course(props) {
     }
     //data.meta.iframe.destroy();
   }
-
-
 
   return (
     <main>
