@@ -7,17 +7,7 @@ function ProfCourses() {
   const dispatch = useDispatch();
   const items = useSelector(state => state.courses.items);
   const [hoverSection, setHover] = useState('');
-  // const [selectFilter, setFilter] = useState('all');
   const [listCourses, setCourses] = useState(items);
-
-  // const filters = [
-  //   {title: 'Все курсы',
-  //   id: 'all'}, 
-  //   {title: 'Курсы парикмахеров',
-  //   id: 'hairstyle'}, 
-  //   {title: 'Курсы визажистов',
-  //   id: 'visagiste'}
-  // ]
 
   const changeHover = (id) => {
     if (hoverSection !== id) {
@@ -38,17 +28,6 @@ return price.group.price
       return price.personal.price
     } else return price.defolt.price
   }
-
-  // useEffect(() => {
-  //   if(selectFilter === 'all') {
-  //     setCourses(items)
-  //   }else setCourses(items.filter(i=>(i.id === selectFilter)))
-  // }, [items, selectFilter])
-  
-
-  // const listFilters = filters.map(i => (
-  //   <div key={i.id} className={selectFilter === i.id ? `wrapper_filter__${i.id} select_filter` : `wrapper_filter__${i.id}`} onClick={()=>setFilter(i.id)}>{i.title}</div>
-  // ))
 
   const courses = listCourses.map(i => (
     <><h2 className='header-description-courses'>{i.title}</h2>

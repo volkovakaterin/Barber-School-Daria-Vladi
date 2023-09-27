@@ -7,7 +7,7 @@ const initialState = {
   successSending: false
 }
 
-export default function scheduleReducer(state = initialState, action) {
+export default function formReducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_FORM:
       return {

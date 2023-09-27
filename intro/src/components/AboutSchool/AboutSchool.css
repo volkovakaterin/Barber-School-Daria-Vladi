@@ -1,0 +1,405 @@
+.about_school {
+  margin-top: 204px;
+}
+
+.about_school_title_wrapper {
+  position: relative;
+}
+
+.about_school_title {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  width: 244px;
+  margin-left: 63%;
+  padding: 30px 21px 162px 42px;
+  box-sizing: border-box;
+
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 500;
+
+  border: 2px solid #dfbc8d;
+  text-align: end;
+}
+
+.about_school_title_decor {
+  position: absolute;
+  top: 22px;
+  right: -124px;
+  display: block;
+  width: 55%;
+  height: 65px;
+  background-color: #dcd8d7;
+}
+
+.about_school_content_wrapper {
+  margin-top: -123px;
+}
+
+.about_school_content_team,
+.about_school_content_Daria {
+  display: flex;
+}
+
+.about_school_container_img,
+.about_school_container_decription {
+  width: 50%;
+}
+
+.about_school_container_img {
+  position: relative;
+}
+
+.about_school_container_img img {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+}
+
+.about_school_substrate_team {
+  position: absolute;
+  top: 100px;
+  left: -124px;
+  display: block;
+  width: 616px;
+  height: 548px;
+  border: 1px solid #000;
+}
+
+.about_school_decor_team {
+  position: absolute;
+  top: 35px;
+  right: -124px;
+  content: "";
+  display: block;
+  width: 133%;
+  height: 1px;
+  background-color: #000;
+}
+
+.about_school_container_decription {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Comforta";
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.about_school_container_decription span {
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 400;
+
+  background-color: rgba(223, 188, 141, 0.18);
+}
+
+.about_school_content_team p {
+  text-align: end;
+}
+
+.about_school_content_Daria {
+  position: relative;
+  margin-top: 100px;
+}
+
+.about_school_content_Daria .about_school_container_decription {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_school_decor_Daria {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: block;
+  aspect-ratio: 0.8;
+  height: auto;
+  background-image: url("../../svg/logo-substrate.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about_school_content_Daria .about_school_container_img {
+  text-align: end;
+}
+
+.about_school_substrate_Daria {
+  position: absolute;
+  top: -9%;
+  width: 90%;
+  aspect-ratio: 0.8;
+  height: auto;
+  right: -124px;
+  display: block;
+  background-color: rgba(223, 204, 180, 0.68);
+}
+
+.about_school_btn_container {
+  position: relative;
+  width: 50%;
+  margin-top: 154px;
+}
+
+.about_school_btn_substrate {
+  position: absolute;
+  top: -70%;
+  left: -124px;
+  display: block;
+  width: 70%;
+  aspect-ratio: 2.9;
+  height: auto;
+  border: 2px solid #dcd8d7;
+}
+
+.about_school_btn_decor {
+  position: absolute;
+  top: -100%;
+  left: 20%;
+  display: block;
+  width: 50%;
+  aspect-ratio: 1.5;
+  height: auto;
+  border: 2px solid #e7dac9;
+}
+
+.about_school_navlink {
+  margin: auto;
+  width: 80%;
+  display: block;
+}
+
+.about_school_btn {
+  width: 100%;
+}
+
+@media (max-width: 1500px) {
+  .about_school_title_decor {
+    right: -60px;
+  }
+
+  .about_school_decor_team {
+    right: -60px;
+    width: 150%;
+  }
+
+  .about_school_substrate_team {
+    top: 10%;
+    left: -60px;
+    width: 85%;
+    aspect-ratio: 0.87;
+    height: auto;
+  }
+
+  .about_school_substrate_Daria {
+    right: -60px;
+  }
+
+  .about_school_btn_substrate {
+    left: -60px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .about_school_title_decor {
+    height: 55px;
+  }
+
+  .about_school_title {
+    width: 203px;
+    padding-bottom: 132px;
+    font-size: 30px;
+  }
+
+  .about_school_content_wrapper {
+    margin-top: -103px;
+  }
+
+  .about_school_container_decription,
+  .about_school_container_decription span {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .about_school_title {
+    width: 183px;
+    padding-bottom: 112px;
+  }
+
+  .about_school_content_wrapper {
+    margin-top: -83px;
+  }
+}
+
+@media (max-width: 970px) {
+  .about_school_title {
+    font-size: 25px;
+  }
+
+  .about_school_substrate_team {
+    left: -20px;
+  }
+
+  .about_school_content_team .about_school_container_img img {
+    margin-left: 10px;
+  }
+
+  .about_school_content_Daria .about_school_container_img img {
+    margin-right: 10px;
+  }
+
+  .about_school_substrate_Daria {
+    right: -20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .about_school_title {
+    width: 153px;
+    padding-bottom: 92px;
+    font-size: 22px;
+  }
+
+  .about_school_content_wrapper {
+    margin-top: -63px;
+  }
+}
+
+@media (max-width: 780px) {
+  .about_school_container_decription,
+  .about_school_container_decription span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about_school_title_wrapper {
+    text-align: end;
+  }
+
+  .about_school_title_decor {
+    top: 15px;
+    right: 0;
+    width: 95%;
+    height: 40px;
+  }
+
+  .about_school_title {
+    width: auto;
+    margin-left: 0;
+    margin-right: 20px;
+    padding: 30px 40px 74px 20px;
+
+    font-size: 19px;
+  }
+
+  .about_school_content_wrapper {
+    margin-top: -20px;
+  }
+
+  .about_school_content_team {
+    flex-direction: column;
+  }
+
+  .about_school_decor_team {
+    display: none;
+  }
+
+  .about_school_substrate_team {
+    top: 25%;
+    left: 0;
+    width: 75%;
+    aspect-ratio: 1.7;
+    height: auto;
+  }
+
+  .about_school_content_team .about_school_container_img::after {
+    position: absolute;
+    left: -10px;
+    top: -30px;
+    content: "";
+    display: block;
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: #000;
+  }
+
+  .about_school_content_team .about_school_container_img,
+  .about_school_content_team .about_school_container_decription {
+    width: 100%;
+  }
+
+  .about_school_container_img {
+    text-align: center;
+  }
+
+  .about_school_content_team .about_school_container_img img {
+    width: 80%;
+  }
+
+  .about_school_container_decription,
+  .about_school_container_decription span {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .about_school_content_team .about_school_container_decription {
+    margin-top: 60px;
+  }
+
+  .about_school_container_decription p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .about_school_content_Daria {
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .about_school_content_Daria
+    > .about_school_container_decription
+    p:nth-child(2) {
+    display: none;
+  }
+
+  .about_school_substrate_Daria {
+    top: -10%;
+    right: 0;
+    width: 80%;
+    aspect-ratio: 0.68;
+    height: auto;
+  }
+
+  .about_school_content_Daria .about_school_container_img {
+    text-align: start;
+  }
+
+  .about_school_btn_container {
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  .about_school_btn_substrate {
+    display: none;
+  }
+
+  .about_school_btn_decor {
+    right: 0;
+    left: auto;
+    top: 50%;
+    width: 50%;
+    aspect-ratio: 1.5;
+    height: auto;
+  }
+
+  .about_school_btn {
+    width: 60%;
+  }
+}

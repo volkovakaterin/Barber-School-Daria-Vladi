@@ -1,43 +1,79 @@
-/* @font-face { */
-/* font-family: "Baron Neue"; */
-/* font-style: normal; */
-/* font-weight: 400; */
-/* src: Если не получилось, загрузит woff2 */
-/* url("./fonts/baronneue.woff2") format("woff2"), */
-/* Если браузер не поддерживает woff2, загрузит woff */
-/* url("./fonts/baronneue.woff") format("woff");} */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-SemiBold.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/Montserrat-SemiBold.woff") format("woff");
+}
 
 @font-face {
-  font-family: 'Monserrat';
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("./fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src:
-    /* Если не получилось, загрузит woff2 */
-    url("./fonts/montserrat-variablefont_wght.woff2") format("woff2"),
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Regular.woff2")
+      format("woff2"),
     /* Если браузер не поддерживает woff2, загрузит woff */
-    url("./fonts/montserrat-variablefont_wght.woff") format("woff");
+      url("./fonts/Montserrat-Regular.woff") format("woff");
 }
 
-html {
-  height: 100%;
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/Montserrat-Light.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Comforta";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    /* Если не получилось, загрузит woff2 */ url("./fonts/comfortaa-light.woff2")
+      format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url("./fonts/comfortaa-light.woff") format("woff");
 }
 
 body {
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   position: relative;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Comforta", "Montserrat", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 800;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  margin: 0;
 }
 
 ul {
@@ -48,6 +84,86 @@ a {
   text-decoration: none;
 }
 
+.about-motivation {
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+}
+
+.about-motivation-line {
+  position: absolute;
+  left: 21.3%;
+  width: 1100px;
+  height: 2px;
+  background-color: #000;
+  bottom: 5%;
+}
+
+.about-motivation-img-hair {
+  position: absolute;
+  right: 0;
+}
+
+.about-motivation-img {
+  margin-top: 150px;
+}
+
+.about-motivation-rectangle {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 1100px;
+  height: 350px;
+  background-color: #dfbc8d;
+  opacity: 18%;
+}
+
+.about-motivation-decor {
+  position: absolute;
+  left: 32%;
+  top: 12%;
+  width: 300px;
+  height: 300px;
+  background: url("./svg/kvadrat-dva.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-motivation-text-wrapper {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-size: 36px;
+}
+
+.choose-course-container {
+  margin: 35px 0 0 45px;
+}
+
+.about-motivation-rectangle-line {
+  position: absolute;
+  bottom: 8%;
+  left: 56%;
+  width: 500px;
+  height: 100px;
+  background-color: #bd9a7a;
+  opacity: 18%;
+}
+
+.about-motivation-btn {
+  padding: 15px 60px;
+  font-family: "Comforta";
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #bc9f84;
+  border: none;
+  box-shadow: 4px 15px 15px 0 rgb(189 154 122 / 75%);
+  cursor: pointer;
+}
+
 .container-header {
   flex: 0 0 auto;
   overflow: hidden;
@@ -55,13 +171,7 @@ a {
 }
 
 .navbar-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.container-fluid {
-  padding-left: 4.167vw;
-  padding-right: 4.167vw;
+  margin-left: 2vw;
 }
 
 .navbar-container {
@@ -81,12 +191,25 @@ a {
 }
 
 .navbar-brand {
-  text-shadow: #bd9a7a 1px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand-line-wrapper {
+  margin-left: 20px;
+}
+
+.navbar-brand-logo {
+  width: 58px;
+  height: 70px;
+  background: url("./svg/logo-DV.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar-brand-line,
 .navbar-location-line,
-.navbar-contacts-phone,
 .navbar-contacts-phone {
   display: block;
 }
@@ -101,47 +224,61 @@ a {
 }
 
 .navbar-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 2vw;
+  align-items: flex-end;
   font-size: 1.15rem;
 }
 
 .navbar-button-call {
   box-sizing: content-box;
-  width: 150px;
   height: 45px;
-  background-color: #bd9a7a;
-  color: #ffffff;
-  border-radius: 25px;
-  position: absolute;
-  top: 95px;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin-top: 10px;
+  padding: 1px 20px;
+  background-color: #000;
+  border: solid 1px #bd9a7a;
+  font-family: "Comforta", "Montserrat", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #ffffff;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navbar-button-call:hover {
   opacity: 0.7;
 }
 
-.navbar-brand-line {
-  font-weight: 800;
-  font-size: 32px;
-  text-align: center;
+.navbar-brand-line-name {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: #bd9a7a;
+}
+
+.navbar-brand-line-subtitle {
+  font-family: "Comforta";
+  padding-left: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 10px;
   color: #bd9a7a;
 }
 
 .box-navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav {
-  width: 1000px;
   display: flex;
-  justify-content: space-evenly;
+  gap: 60px;
   margin: auto;
   padding-left: 0;
 }
@@ -150,21 +287,22 @@ a {
   position: relative;
 }
 
-.navbar-nav .nav-item:not(:first-child):before {
+.nav-item:before {
   content: "";
   display: block;
   height: 16px;
   border-left: solid 2px #bd9a7a;
   position: absolute;
-  left: -45px
+  right: -10px;
+  top: calc(50% - 8px);
 }
 
 .navbar-location::before {
-  content: url('./svg/map-location-pointer-svgrepo-com.svg');
+  content: url("./svg/map-location-pointer-svgrepo-com.svg");
+  content: url("./svg/map-location-pointer-svgrepo-com.svg");
   position: relative;
-  top: 15px;
+  top: 18px;
   left: -20px;
-
 }
 
 .navbar-location .navbar-location-line:first-child {
@@ -184,22 +322,30 @@ a {
 .about-courses {
   margin-top: 40px;
   padding: 20px 0 35px 0;
-  border: 1px solid #bca188
+  border: 1px solid #bca188;
+  border: 1px solid #bca188;
 }
 
 .about-courses-title {
   text-align: center;
-    font-size: 25px;
-    margin-top: 15px;
+  font-size: 25px;
+  margin-top: 15px;
+  font-size: 25px;
+  margin-top: 15px;
 }
 
 .about-school-title {
   text-align: center;
-    margin: 40px 0 20px 0;
-    font-size: 25px;
-    border-top: 1px solid rgba(12, 11, 16, 0.5);
-    border-bottom: 1px solid rgba(12, 11, 16, 0.5);
-    padding: 10px;
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  border-top: 1px solid rgba(12, 11, 16, 0.5);
+  border-bottom: 1px solid rgba(12, 11, 16, 0.5);
+  padding: 10px;
+  margin: 40px 0 20px 0;
+  font-size: 25px;
+  border-top: 1px solid rgba(12, 11, 16, 0.5);
+  border-bottom: 1px solid rgba(12, 11, 16, 0.5);
+  padding: 10px;
 }
 
 .about-courses-section {
@@ -221,14 +367,9 @@ a {
   margin-left: 20px;
 }
 
-.btn-choose-course {
-  margin: auto;
-}
-
 .navlink-choose-course {
   margin: auto;
-    width: 150px;
-    display: block;
+  display: block;
 }
 
 .about-school-content {
@@ -239,7 +380,6 @@ a {
 .about-school-container-img {
   display: block;
   width: 30%;
-  /* height: 600px; */
 }
 
 .about-school-container-img img {
@@ -249,9 +389,22 @@ a {
 }
 
 .about-school-container-decription {
+  position: relative;
   width: 70%;
   text-align: end;
   margin-left: 10px;
+}
+
+.about-school-substrate {
+  position: absolute;
+  bottom: -5px;
+  right: -50px;
+  width: 500px;
+  height: 345px;
+  background: url("./svg/logo-substrate.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ProfCourses */
@@ -260,8 +413,8 @@ main {
   flex: 1 0 auto;
   overflow: hidden;
   background-color: #f6f6f6;
-  padding-bottom: 100px;
-  min-height: 450px;
+  padding-bottom: 300px;
+  min-height: calc(100vh - 222px - 127px - 300px);
 }
 
 .container-profcourses,
@@ -308,7 +461,6 @@ main {
 }
 
 .container-img {
-  /* width: 296px; */
   display: block;
   height: 365px;
   padding: 10px;
@@ -317,7 +469,6 @@ main {
 .container-img img {
   width: 296px;
   height: 365px;
-  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -329,7 +480,6 @@ main {
 .price-number {
   font-weight: bolder;
   color: #bd9a7a;
-  text-shadow: #bd9a7a 1px 0 10px;
 }
 
 .container-course {
@@ -345,7 +495,8 @@ main {
   overflow: hidden;
   width: 296px;
   height: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .review-course-hover {
@@ -396,10 +547,15 @@ main {
 }
 
 .description-about-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 30px;
 }
 
 .title-about-course {
+  font-family: "Montserrat";
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 25px;
   text-shadow: #997d63 1px 0 10px;
@@ -419,7 +575,10 @@ main {
 .about-course-img {
   width: 316px;
   height: 390px;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 .about-course-img img {
@@ -452,7 +611,8 @@ main {
 }
 
 .price-content::before {
-  content: url('./svg/price.svg');
+  content: url("./svg/price.svg");
+  content: url("./svg/price.svg");
   position: relative;
   top: 5px;
 }
@@ -465,33 +625,60 @@ main {
   color: #bd9a7a;
 }
 
-.course-btn-enroll {
-  box-sizing: content-box;
-  width: 150px;
-  height: 45px;
-  background-image: linear-gradient(to right, #bca188, #bd9a7a, #bd9a7a, #bca188);
-  box-shadow: 0 4px 15px 0 rgb(189 154 122 / 75%);
-  border: #bd9a7a;
-  color: #ffffff;
-  margin-top: 35px;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: .5s;
+.course-btn-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
 }
 
+.course-btn-container .course-btn-buy,
+.course-btn-container .course-btn-enroll {
+  width: 50%;
+  padding: 15px 10px;
+  box-sizing: content-box;
+  background-image: linear-gradient(
+    to right,
+    #bca188,
+    #bd9a7a,
+    #bd9a7a,
+    #bca188
+  );
+  box-shadow: 4px 15px 15px 0 rgb(189 154 122 / 75%);
+  border: #bd9a7a;
+  color: #ffffff;
+  font-family: "Comforta";
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition: 0.5s;
+}
+
+.course-btn-container .course-btn-enroll {
+  background-image: none;
+  background-color: #f6f6f6;
+  color: #ab8c71;
+}
+
+.course-btn-buy:hover,
 .course-btn-enroll:hover {
   opacity: 0.7;
+}
+
+.look-all-course .course-btn-enroll {
+  display: block;
+  width: 250px;
+  margin-top: 40px;
 }
 
 .content-about-course {
   margin-top: 35px;
   padding: 10px;
   border: 2px solid #bd9a7a;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 /* Sign As Model */
@@ -512,7 +699,10 @@ main {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 70px;
-  box-shadow:  -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
+  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+    4px 4px 10px rgb(12 11 16 / 15%);
 }
 
 .line-sign-model {
@@ -528,7 +718,6 @@ main {
   text-align: center;
 }
 
-
 /* Schedule */
 
 .header-schedule {
@@ -542,7 +731,10 @@ main {
   background-color: #0c0b10;
   border-radius: 25px;
   width: 100%;
-  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15), 4px 4px 10px rgba(12, 11, 16, 0.15);
+  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15),
+    4px 4px 10px rgba(12, 11, 16, 0.15);
+  box-shadow: -4px 4px 10px rgba(12, 11, 16, 0.15),
+    4px 4px 10px rgba(12, 11, 16, 0.15);
 }
 
 .header-table {
@@ -574,8 +766,7 @@ main {
   border-bottom: 1px solid rgba(189, 154, 122, 0.5);
 }
 
-.line-table-cell
- {
+.line-table-cell {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -588,8 +779,10 @@ main {
 }
 
 .wrapper__table-btn {
- width: 50%;
- text-align: center;
+  width: 50%;
+  text-align: center;
+  width: 50%;
+  text-align: center;
 }
 
 /* Form */
@@ -611,10 +804,12 @@ main {
 
 .box-all-boxes {
   width: 600px;
-    margin: auto;
+  margin: auto;
+  margin: auto;
 }
 
-.box-report-show, .box-error-show {
+.box-report-show,
+.box-error-show {
   display: block;
   width: 500px;
   margin: 40vh auto;
@@ -624,7 +819,8 @@ main {
   font-size: 20px;
 }
 
-.box-report-hide, .box-error-hide {
+.box-report-hide,
+.box-error-hide {
   display: none;
 }
 
@@ -640,7 +836,8 @@ main {
 
 .hide-form-back-call {
   display: block;
-  background: url('./svg/hide-form-back-call.svg');
+  background: url("./svg/hide-form-back-call.svg");
+  background: url("./svg/hide-form-back-call.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   width: 20px;
@@ -656,7 +853,20 @@ main {
   display: flex;
   margin-bottom: 10px;
   color: #f6f6f6;
-  background: linear-gradient(to right, rgba(30, 26, 28, 1), rgb(15, 13, 14), rgb(15, 13, 14), rgba(30, 26, 28, 1));
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   border: none;
 }
 
@@ -684,7 +894,8 @@ main {
 
 .label-phone-show {
   display: block;
-  color:#ffffff;
+  color: #ffffff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -703,36 +914,31 @@ main {
 
 .btn-back-call-phone {
   color: #f6f6f6;
-  background: linear-gradient(to right, rgba(30, 26, 28, 1), rgb(15, 13, 14), rgb(15, 13, 14), rgba(30, 26, 28, 1));
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
+  background: linear-gradient(
+    to right,
+    rgba(30, 26, 28, 1),
+    rgb(15, 13, 14),
+    rgb(15, 13, 14),
+    rgba(30, 26, 28, 1)
+  );
   border: none;
   cursor: pointer;
 }
 
-@media(min-width: 1400px) {
+@media (min-width: 641px) {
   .container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
     background-color: black;
   }
-}
-
-.table-btn-enroll {
-  box-sizing: content-box;
-  width: 100px;
-  height: 35px;
-  background: linear-gradient(120deg, rgba(246, 246, 246, 1),rgb(189, 154, 122), rgb(189, 154, 122), rgb(189, 154, 122));
-  border: 0;
-  border-radius: 25px;
-  color: #ffffff;
-  font-family: 'Monserrat', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: .5s;
-}
-
-.table-btn-enroll:hover {
-  opacity: 0.7;
 }
 
 /* Footer */
@@ -747,7 +953,6 @@ main {
   color: #f6f6f6;
   padding-top: 20px;
   padding-bottom: 30px;
-  padding-left: 200px;
 }
 
 .contacts-footer,
@@ -791,10 +996,54 @@ main {
   color: #f6f6f6;
 }
 
-@media(min-width: 1060px) and (max-width: 1399px) {
+@media (max-width: 1690px) {
+  .navbar-brand-line-wrapper {
+    margin-left: 5px;
+  }
 
+  .navbar-brand-line-name {
+    font-size: 32px;
+  }
+
+  .navbar-brand-line-subtitle {
+    font-size: 10px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .navbar-contacts {
+    font-size: 15px;
+  }
+
+  .navbar-button-call {
+    height: 35px;
+    padding: 1px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1500px) {
+  main {
+    padding-bottom: 150px;
+    min-height: calc(100vh - 246px - 138px - 90px);
+  }
+
+  .container-main {
+    width: auto;
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: 1060px) and (max-width: 1399px) {
   .container-header {
     background-color: black;
+  }
+
+  .navbar-nav {
+    max-width: 400px;
+    flex-wrap: wrap;
   }
 
   .navbar-contacts-phone,
@@ -805,47 +1054,93 @@ main {
   .navbar-button-call {
     height: 35px;
   }
-
-  .box-navbar {
-    padding-top: 40px;
-  }
-
-  /* Main */
-.container-main {
-  width: 90%;
-}
 }
 
-@media(min-width: 641px) and (max-width: 1059px) {
-  .container-header {
-    background-color: black;
+@media (min-width: 641px) and (max-width: 1250px) {
+  .about-motivation {
+    margin-top: 100px;
   }
 
-  .navbar-brand-line {
+  .about-motivation-text-wrapper {
+    top: 70%;
+    left: 45%;
+    font-size: 30px;
+  }
+
+  .about-motivation-img-hair {
+    z-index: 3;
+    width: 64%;
+  }
+
+  .about-motivation-img {
+    z-index: 2;
+    width: 40%;
+  }
+
+  .about-motivation-img-hair img,
+  .about-motivation-img img {
+    width: 100%;
+  }
+
+  .about-motivation-decor {
+    left: 12%;
+    top: -5%;
+    width: 50%;
+    aspect-ratio: 1;
+    height: auto;
+  }
+
+  .about-motivation-rectangle {
+    z-index: 3;
+    width: 120%;
+    height: 70%;
+  }
+
+  .about-motivation-btn {
+    position: absolute;
+    width: 80%;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 770px) {
+  .about-motivation-text-wrapper {
+    top: 62%;
     font-size: 25px;
   }
+}
 
-  .navbar-contacts {
-    font-size: 14px;
-  }
+@media (max-width: 1059px) {
+  /* HEADER start*/
 
-  .navbar-button-call {
-    width: 100px;
-    height: 35px;
-    font-size: 12px;
-    top: 85px
+  .navbar-brand-line-name {
+    font-size: calc(1em + 1vw);
+    letter-spacing: 5px;
   }
 
   .navbar-nav {
-    width: 600px;
-    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
   }
 
-  .navbar-nav .nav-item:not(:first-child):before {
-    border-left: solid 1px #bd9a7a;
-    left: -13px;
+  .nav-item {
+    display: flex;
+    align-items: center;
   }
 
+  .navbar-contacts {
+    padding-left: 20px;
+  }
+
+  .navbar-contacts {
+    font-size: 13px;
+  }
+
+  /* HEADER end*/
+}
+
+@media (min-width: 641px) and (max-width: 1059px) {
   .container-profcourses,
   .container-about-course,
   .container-sign-model,
@@ -889,12 +1184,9 @@ main {
     padding-bottom: 0;
   }
 
-  .about-course-img {
-    width: 45%;
-  }
-
+  .about-course-img,
   .description-about-course {
-    width: 45%;
+    width: 50%;
   }
 
   .title-about-course {
@@ -919,6 +1211,12 @@ main {
     font-size: 20px;
   }
 
+  .course-btn-container .course-btn-buy,
+  .course-btn-container .course-btn-enroll {
+    padding: 10px;
+    font-size: 18px;
+  }
+
   .content-about-course {
     font-size: 15px;
   }
@@ -938,46 +1236,59 @@ main {
   }
 
   /* Main */
-.container-main {
-  width: 90%;
-}
+  .about-courses {
+    margin-top: 20px;
+    padding: 10px 0 15px 0;
+  }
 
-.about-courses {
-  margin-top: 20px;
-  padding: 10px 0 15px 0;
-}
+  .about-courses-title {
+    .about-courses-title {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+  }
 
-.about-courses-title {
-    font-size: 20px;
-    margin-top: 5px;
-}
+  .about-school-title {
+    .about-school-title {
+      margin: 15px 0 15px 0;
+      font-size: 20px;
+    }
+  }
 
-.about-school-title {
-    margin: 15px 0 15px 0;
-    font-size: 20px;
-}
+  .about-courses-section-content {
+    margin-top: 15px;
+  }
+  .about-courses-section-content {
+    margin-top: 15px;
+  }
 
-.about-courses-section-content {
-  margin-top: 15px;
-}
+  .about-courses-section-img img {
+    width: 35px;
+  }
+  .about-courses-section-img img {
+    width: 35px;
+  }
 
-.about-courses-section-img img {
-  width: 35px;
-}
+  .about-courses-section-description {
+    width: 70%;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  .about-courses-section-description {
+    width: 70%;
+    margin-left: 20px;
+    font-size: 14px;
+  }
 
-.about-courses-section-description {
-  width: 70%;
-  margin-left: 20px;
-  font-size: 14px;
-}
-
-.about-school-container-decription {
-  font-size: 14px;
-}
+  .about-school-container-decription {
+    font-size: 14px;
+  }
+  .about-school-container-decription {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 640px) {
-
   .body {
     position: fixed;
   }
@@ -990,7 +1301,24 @@ main {
   }
 
   .navbar-header {
+    margin-left: 0;
+
     background-color: black;
+  }
+
+  .navbar-container {
+    padding: 0;
+  }
+
+  .navbar-brand-logo {
+    width: 58px;
+    height: 76px;
+  }
+
+  .mobile-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .header-open-burger {
@@ -1005,6 +1333,7 @@ main {
   }
 
   .box-navbar {
+    display: block;
     opacity: 0;
     visibility: hidden;
     transition: 1.5s ease;
@@ -1021,6 +1350,7 @@ main {
     opacity: 1;
     visibility: visible;
     height: 100vh;
+    padding-top: 50px;
     z-index: 5;
   }
 
@@ -1031,37 +1361,47 @@ main {
   }
 
   .nav-item {
+    display: block;
     width: 50%;
     margin: auto;
     padding-top: 20px;
+    font-size: 16px;
     text-align: center;
+  }
+
+  .nav-item:before {
+    display: none;
   }
 
   .navbar-nav .nav-item:not(:first-child):before {
     content: "";
     display: block;
-    width: 50px;
+    width: 100px;
     height: 0;
     border-top: solid 1px #bd9a7a;
     border-left: 0;
     position: absolute;
-    top: 10px;
-    left: calc(50% - 25px);
+    top: 0;
+    left: calc(50% - 50px);
   }
 
-  .navbar-brand-line {
-    font-size: 17px;
+  .navbar-brand-line-wrapper {
+    margin-left: 5px;
+  }
+
+  .navbar-brand-line-subtitle {
+    font-size: 8px;
+    letter-spacing: 5px;
   }
 
   .mobile-contacts-phone {
     display: block;
-    background: url('./svg/call-svgrepo-com.svg');
+    background: url("./svg/call-svgrepo-com.svg");
+    background: url("./svg/call-svgrepo-com.svg");
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid rgb(74%, 60%, 48%, 0.7);
-    border-radius: 50px;
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
   }
 
   .mobile-menu,
@@ -1074,6 +1414,11 @@ main {
     border-radius: 25px;
   }
 
+  .mobile-menu {
+    margin-right: 5px;
+    margin-top: -10px;
+  }
+
   .mobile-menu::after {
     position: relative;
     top: 10px;
@@ -1082,13 +1427,99 @@ main {
 
   .mobile-menu-close {
     display: block;
-    background: url('./svg/delete-svgrepo-com2.svg');
+    background: url("./svg/delete-svgrepo-com2.svg");
+    background: url("./svg/delete-svgrepo-com2.svg");
     background-position: center;
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
   }
 
+  /* About motivation */
+
+  .about-motivation {
+    margin-top: 25px;
+  }
+
+  .about-motivation-img {
+    z-index: 1;
+
+    width: 49%;
+    margin-top: 50px;
+  }
+
+  .about-motivation-img img {
+    width: 100%;
+  }
+
+  .about-motivation-line {
+    display: none;
+  }
+
+  .about-motivation-rectangle {
+    z-index: 2;
+    top: 8%;
+    height: 200px;
+  }
+
+  .about-motivation-img-hair {
+    z-index: 3;
+
+    width: 62%;
+  }
+
+  .about-motivation-img-hair img {
+    width: 100%;
+  }
+
+  .about-motivation-text-wrapper {
+    top: 50%;
+    left: 55%;
+
+    width: 50%;
+
+    font-size: calc(1rem + 1vw);
+  }
+
+  .about-motivation .choose-course-container {
+    width: 90%;
+    margin: 10px 0 0 0;
+  }
+
+  .about-motivation-rectangle-line {
+    bottom: -20%;
+    left: 30%;
+
+    width: 50%;
+    height: auto;
+    aspect-ratio: 0.95;
+  }
+
+  .about-motivation-decor {
+    display: none;
+  }
+
+  .about-motivation-kvadroline {
+    position: absolute;
+    top: -15%;
+    left: 48px;
+
+    width: 617px;
+    height: auto;
+    aspect-ratio: 1.54;
+
+    background-image: url("./svg/line-header.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .about-motivation-btn {
+    width: 200px;
+    font-size: 13px;
+    box-sizing: content-box;
+    padding: 15px 20px;
+  }
 
   .title-social-net {
     display: none;
@@ -1116,11 +1547,10 @@ main {
   /* ProfCourses */
 
   main {
+    min-height: calc(100vh - 146px - 136px);
     margin-top: 76px;
-    min-height: 550px;
     padding-top: 0;
-    padding-bottom: 15px;
-    min-height: 200px;
+    padding-bottom: 70px;
   }
 
   .container-profcourses,
@@ -1150,13 +1580,16 @@ main {
     justify-content: space-evenly;
   }
 
-  .wrapper_filter__all, .wrapper_filter__hairstyle, .wrapper_filter__visagiste {
+  .wrapper_filter__all,
+  .wrapper_filter__hairstyle,
+  .wrapper_filter__visagiste {
     border: 1px solid rgba(56, 48, 53, 0.2);
     border-radius: 50px;
     margin-top: 10px;
     padding: 13px;
     font-size: 14px;
-    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%), 4px 4px 10px rgb(56 48 53 / 15%);
+    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%),
+      4px 4px 10px rgb(56 48 53 / 15%);
   }
 
   .select_filter {
@@ -1176,9 +1609,10 @@ main {
     padding: 20px 0;
     margin-top: 20px;
     border: 1px solid rgba(56, 48, 53, 0.3);
-    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%), 4px 4px 10px rgb(56 48 53 / 15%);
-}
-    
+    box-shadow: -4px 4px 10px rgb(56 48 53 / 15%),
+      4px 4px 10px rgb(56 48 53 / 15%);
+  }
+
   .container-img {
     margin: auto;
     width: 90%;
@@ -1193,7 +1627,7 @@ main {
 
   .title-course {
     margin-top: 10px;
-    padding: 0 5px
+    padding: 0 5px;
   }
 
   .price-group {
@@ -1237,13 +1671,14 @@ main {
     box-sizing: border-box;
     padding: 10px;
     width: 95%;
-    text-transform: uppercase;
     font-size: 15px;
+    font-weight: 500;
     letter-spacing: 1px;
     text-align: center;
     margin: 20px auto 20px auto;
     border: 1px solid #bca188;
-    box-shadow:  -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
   }
 
   .title-about-course::after,
@@ -1255,6 +1690,7 @@ main {
     width: 70%;
     margin: auto;
     margin-top: 20px;
+    font-family: "Montserrat";
     text-align: center;
   }
 
@@ -1267,7 +1703,6 @@ main {
     letter-spacing: 1px;
     font-size: 15px;
     border-bottom: 1px solid #bd9a7a;
-
   }
 
   .box-personal {
@@ -1276,11 +1711,13 @@ main {
 
   .duratin-content {
     margin-top: 10px;
+    font-weight: 500;
   }
 
   .price-content {
     margin-top: 10px;
     font-size: 17px;
+    font-weight: 500;
   }
 
   .price-content::before {
@@ -1291,14 +1728,27 @@ main {
     margin-left: 0;
   }
 
-  .course-btn-enroll {
-    display: block;
+  .course-btn-container {
     width: 95%;
-    height: 40px;
     margin: auto;
     margin-top: 20px;
-    background: linear-gradient(90deg, rgba(246, 246, 246, 1), rgb(189, 154, 122), rgb(189, 154, 122), rgba(246, 246, 246, 1));
-    box-shadow: none;
+    justify-content: center;
+  }
+
+  .course-btn-container .course-btn-buy,
+  .course-btn-container .course-btn-enroll {
+    display: block;
+    width: 50%;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Comforta";
+    font-weight: 300;
+    height: 45px;
+    letter-spacing: 1px;
+  }
+
+  .course-btn-container .course-btn-enroll {
+    position: relative;
   }
 
   .content-about-course {
@@ -1357,13 +1807,8 @@ main {
 
   .wrapper__table-btn {
     width: 30%;
-   }
-
-  .table-btn-enroll {
-    width: 70px;
-    height: 25px;
-    font-size: 12px;
   }
+
   /* Sign As Model */
 
   .header-sign-model {
@@ -1390,11 +1835,12 @@ main {
   }
 
   /* Modal-form */
-.box-all-boxes {
-  width: 95%;
-}
+  .box-all-boxes {
+    width: 95%;
+  }
 
-  .box-report-show, .box-error-show {
+  .box-report-show,
+  .box-error-show {
     box-sizing: border-box;
     width: 95%;
     padding: 10px;
@@ -1409,7 +1855,8 @@ main {
     left: 94%;
     width: 15px;
     height: 15px;
-    background-size: 15px; 
+    background-size: 15px;
+    background-size: 15px;
   }
 
   .box-form-course,
@@ -1419,89 +1866,202 @@ main {
     font-size: 16px;
   }
 
-   /* Main */
+  /* Main */
 
-.container-main {
-  width: 95%;
-}
+  .container-main {
+    box-sizing: border-box;
+  }
 
-.about-courses {
-  margin-top: 10px;
-  padding: 15px 0 15px 0;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
-}
+  .about-courses {
+    margin-top: 500px;
+    padding: 15px 0 15px 0;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
 
-.about-courses-title {
+  .about-courses-title {
     font-size: 17px;
     margin-top: 5px;
     margin-bottom: 5px;
-}
+  }
 
-.about-school-title {
+  .about-school-title {
     margin: 20px 0 10px 0;
     font-size: 17px;
     border-top: 1px solid rgba(12, 11, 16, 0.5);
     border-bottom: 1px solid rgba(12, 11, 16, 0.5);
     padding: 10px;
+  }
+
+  .about-courses-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .about-courses-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .about-courses-section-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .about-courses-section-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .about-courses-section-img img {
+    width: 30px;
+  }
+  .about-courses-section-img img {
+    width: 30px;
+  }
+
+  .about-courses-section-description {
+    width: 80%;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  .about-courses-section-description {
+    width: 80%;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .navlink-choose-course {
+    width: 100%;
+  }
+  .navlink-choose-course {
+    width: 100%;
+  }
+
+  .about-school {
+    margin-top: 30px;
+  }
+  .about-school {
+    margin-top: 30px;
+  }
+
+  .about-school-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-school-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-school-container-img {
+    display: block;
+    width: 100%;
+  }
+  .about-school-container-img {
+    display: block;
+    width: 100%;
+  }
+
+  .about-school-container-img img {
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
+  .about-school-container-img img {
+    width: 100%;
+    height: 100%;
+    box-shadow: -4px 4px 10px rgb(12 11 16 / 15%),
+      4px 4px 10px rgb(12 11 16 / 15%);
+  }
+
+  .about-school-container-decription {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
-.about-courses-section {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+@media (max-width: 570px) {
+  .about-motivation-btn {
+    width: auto;
+  }
 }
 
-.about-courses-section-content {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  width: 100%;
+@media (min-width: 480px) and (max-width: 640px) {
+  /* About motivation */
+  .about-motivation-rectangle {
+    top: 5%;
+    height: calc(200px + 12vw);
+  }
 }
 
-.about-courses-section-img img {
-  width: 30px;
+@media (min-width: 460px) and (max-width: 640px) {
+  .about-motivation-text-wrapper {
+    top: 55%;
+    left: 55%;
+    width: 40%;
+  }
+
+  .about-motivation .choose-course-container {
+    margin-top: 20px;
+  }
 }
 
-.about-courses-section-description {
-  width: 80%;
-  margin-left: 10px;
-  font-size: 14px;
+@media (min-width: 420px) and (max-width: 480px) {
+  /* About motivation */
+  .about-motivation-rectangle {
+    top: 5%;
+    height: calc(200px + 5vw);
+  }
 }
 
-.navlink-choose-course {
-  width: 100%;
+@media (min-width: 420px) and (max-width: 640px) {
+  /* About motivation */
+  .about-motivation-kvadroline {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+
+    background-image: url("./svg/line-header-640.svg");
+  }
 }
 
-.btn-choose-course {
-  width: 100%;
-  padding: 0;
+@media (max-width: 340px) {
+  /* Header */
+
+  .mobile-contacts-phone {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+  }
+
+  .mobile-menu {
+    margin-left: 5px;
+  }
+
+  .mobile-menu,
+  .mobile-menu::after {
+    width: 25px;
+  }
 }
 
-.about-school {
-  margin-top: 30px;
+@media (max-width: 335px) {
+  .about-motivation-btn {
+    padding: 5px 20px;
+  }
 }
 
-.about-school-content {
-  flex-direction: column;
-  width: 100%;
-}
-
-.about-school-container-img {
-  display: block;
-  width: 100%;
-}
-
-.about-school-container-img img {
-  width: 100%;
-  height: 100%;
-  box-shadow: -4px 4px 10px rgb(12 11 16 / 15%), 4px 4px 10px rgb(12 11 16 / 15%);
-}
-
-.about-school-container-decription {
-  width: 100%;
-  margin-left: 0;
-  text-align: center;
-  font-size: 14px;
-}
-
+@media (max-width: 308px) {
+  /* About motivation */
+  .about-motivation-kvadroline {
+    left: 42px;
+    top: -95px;
+  }
 }

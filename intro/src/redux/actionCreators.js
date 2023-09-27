@@ -1,4 +1,4 @@
-import { TAKE_COURSES, CHANGE_COURSE, TAKE_SCHEDULE, SHOW_FORM, HIDE_FORM, SHOW_FORM_REGISTRATION, SEND_REGISTRATION_FAILURE, SEND_REGISTRATION_SUCCESS } from "./actions";
+import { TAKE_COURSES, CHANGE_COURSE, SHOW_FORM, HIDE_FORM, SHOW_FORM_REGISTRATION, SEND_REGISTRATION_FAILURE, SEND_REGISTRATION_SUCCESS, OPEN_CREDIT_FAILURE, OPEN_CREDIT_SUCCESS } from "./actions";
 
 export const takeCourses = () => ({
   type: TAKE_COURSES,
@@ -9,10 +9,6 @@ export const changeCourse = (chosenCourse, e) => ({
   payload: {
     chosenCourse
   }
-});
-
-export const takeSchedule = () => ({
-  type: TAKE_SCHEDULE,
 });
 
 export const showForm = () => ({
@@ -42,6 +38,7 @@ export const sendRegistrationSuccess = () => ({
 });
 
 export const sendRegistrationForm = async (dispatch, message) => {
+  console.log('sendRegistrationForm')
   try {
     const response = await fetch('//dariavlady.ru:8000/send_registration_form', {
       method: 'POST',
@@ -54,5 +51,32 @@ export const sendRegistrationForm = async (dispatch, message) => {
     dispatch(sendRegistrationSuccess());
   } catch (e) {
     dispatch(sendRegistrationFailure(e.message));
+  }
+}
+
+export const openCreditFormFailure = error => ({
+  type: OPEN_CREDIT_FAILURE,
+  payload: {
+    error,
+  },
+});
+
+export const openCreditFormSuccess = () => ({
+  type: OPEN_CREDIT_SUCCESS,
+});
+
+export const openCreditForm = async (dispatch, title, status) => {
+  try {
+    const response = await fetch('//dariavlady.ru:8000/open_credit_form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({name: title, status: status}),
+    })
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    dispatch(openCreditFormSuccess());
+  } catch (e) {
+    dispatch(openCreditFormFailure(e.message));
   }
 }
