@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Barber-School-Daria-Vladi/static/css/main.e6fc00ed.css",
-    "main.js": "/Barber-School-Daria-Vladi/static/js/main.09c00f77.js",
+    "main.js": "/Barber-School-Daria-Vladi/static/js/main.f33c8987.js",
     "static/media/DariaMaster-cut.jpg": "/Barber-School-Daria-Vladi/static/media/DariaMaster-cut.cb3c27909be962c82c94.jpg",
     "static/media/threeMasterCadrir.jpg": "/Barber-School-Daria-Vladi/static/media/threeMasterCadrir.c71f1f443ea4259443e1.jpg",
     "static/media/threeMasterMobile.jpg": "/Barber-School-Daria-Vladi/static/media/threeMasterMobile.18c1a35b4b8efea966bf.jpg",
@@ -37,10 +37,10 @@
     "static/media/line-header-640.svg": "/Barber-School-Daria-Vladi/static/media/line-header-640.2b726e9706f469e8879a.svg",
     "static/media/line-header.svg": "/Barber-School-Daria-Vladi/static/media/line-header.1a97c116acce2b0adbfb.svg",
     "main.e6fc00ed.css.map": "/Barber-School-Daria-Vladi/static/css/main.e6fc00ed.css.map",
-    "main.09c00f77.js.map": "/Barber-School-Daria-Vladi/static/js/main.09c00f77.js.map"
+    "main.f33c8987.js.map": "/Barber-School-Daria-Vladi/static/js/main.f33c8987.js.map"
   },
   "entrypoints": [
     "static/css/main.e6fc00ed.css",
-    "static/js/main.09c00f77.js"
+    "static/js/main.f33c8987.js"
   ]
 }
